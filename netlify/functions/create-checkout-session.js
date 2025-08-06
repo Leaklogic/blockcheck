@@ -1,7 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
-  const YOUR_DOMAIN = 'https://your-site-name.netlify.app'; // Replace with your live Netlify URL
+const YOUR_DOMAIN = 'https://leaklogicuk.co.uk';
 
   try {
     const session = await stripe.checkout.sessions.create({
