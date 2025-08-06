@@ -43,7 +43,7 @@ const YOUR_DOMAIN = 'https://leaklogicuk.co.uk';
               name: 'LeakLogic Block-Check Blue™ Kit',
               images: [`${YOUR_DOMAIN}/assets/hero-kit.png`], 
             },
-            unit_amount: 10, // Price in pence (1499p = £14.99)
+            unit_amount: 50, // Price in pence (50p = £0.50). This is above Stripe's 30p minimum.
           },
           quantity: 1,
         },
