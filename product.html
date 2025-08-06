@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Buy LeakLogic Block-Check Blue™ | Head Gasket Tester Kit UK</title>
-  <meta name="description" content="Purchase the LeakLogic Block-Check Blue™ head gasket test kit directly. Fast UK shipping. Get a definitive diagnosis in minutes.">
+  <meta name="description" content="Purchase the LeakLogic Block-Check Blue™ head gasket test kit directly. Fast UK shipping options available. Get a definitive diagnosis in minutes for £9.99.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="https://leaklogicuk.co.uk/product.html" />
   
@@ -11,6 +11,41 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+
+  <!-- SEO: Product Schema for Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "LeakLogic Block-Check Blue™ Head Gasket Tester Kit",
+    "image": "https://leaklogicuk.co.uk/assets/hero-kit.png",
+    "description": "The definitive DIY combustion leak tester kit for diagnosing blown head gaskets or cracked cylinder heads in petrol, diesel, and LPG engines. Provides a clear blue-to-yellow result in under 2 minutes. Made in the UK with non-toxic fluid.",
+    "brand": {
+      "@type": "Brand",
+      "name": "LeakLogic"
+    },
+    "sku": "LL-BCB-01",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://leaklogicuk.co.uk/product.html",
+      "priceCurrency": "GBP",
+      "price": "9.99",
+      "availability": "https://schema.org/InStock",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "2.99",
+          "currency": "GBP"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "GB"
+        }
+      }
+    }
+  }
+  </script>
 
   <!-- Stripe.js - Required for checkout -->
   <script src="https://js.stripe.com/v3/"></script>
@@ -71,13 +106,13 @@
       </div>
       <div class="product-details">
         <h1>Block-Check Blue™ Kit</h1>
-        <div class="product-price">£12.99</div>
+        <div class="product-price">£9.99</div>
         <p class="product-description">The definitive DIY test for diagnosing a blown head gasket. Get a clear, yes/no result in under two minutes.</p>
         <ul class="product-features">
             <li>✅ Universal fit for petrol, diesel & LPG engines</li>
             <li>✅ Safe, non-toxic, UK-made formula</li>
             <li>✅ Includes everything needed for ≈ 15 tests</li>
-            <li>✅ Fast & Free UK Shipping</li>
+            <li>✅ Fast UK Shipping Options Available</li>
         </ul>
         <button id="checkout-button" class="buy-button">Buy Now with Secure Checkout</button>
       </div>
@@ -88,12 +123,11 @@
     <div class="container">
       <p><a href="/">Home</a> | <a href="/blog/">Blog</a> | <a href="/symptom-checker.html">Symptom Checker</a></p>
       <p><a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
-      <p style="margin-top:8px">© 2025 LeakLogic Ltd. All rights reserved.</p>
+      <p style-="margin-top:8px">© 2025 LeakLogic Ltd. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // ===> IMPORTANT: PASTE YOUR STRIPE PUBLISHABLE KEY HERE <===
     const stripe = Stripe('pk_live_51RtEzvDTb8F5RSDHkYr3zwheLPs2se2foOhPjF3iYj8W79oJvP6G6WKYsqVIrBgM8XAgz1WJlkPSG5GxRNBQ9qud00i1QIeDAW'); 
 
     document.getElementById("checkout-button").addEventListener("click", async function () {
