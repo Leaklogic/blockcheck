@@ -1,12 +1,40 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
-  // ===> IMPORTANT: REPLACE WITH YOUR LIVE NETLIFY URL <===
-  const YOUR_DOMAIN = 'https://leaklogicuk.co.uk';
+  const YOUR_DOMAIN = 'https://your-site-name.netlify.app'; // Replace with your live Netlify URL
 
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
+      
+      // === NEW LINES ADDED HERE ===
+      shipping_address_collection: {
+        allowed_countries: ['GB'], // Only allow shipping to Great Britain
+      },
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: 'fixed_amount',
+            fixed_amount: {
+              amount: 0, // Price in pence. 0 for free shipping
+              currency: 'gbp',
+            },
+            display_name: 'Royal Mail First Class',
+            delivery_estimate: {
+              minimum: {
+                unit: 'business_day',
+                value: 1,
+              },
+              maximum: {
+                unit: 'business_day',
+                value: 3,
+              },
+            },
+          },
+        },
+      ],
+      // === END OF NEW LINES ===
+
       line_items: [
         {
           price_data: {

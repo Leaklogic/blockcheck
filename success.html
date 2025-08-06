@@ -3,19 +3,57 @@
 <head>
   <meta charset="utf-8">
   <title>Order Successful - LeakLogic UK</title>
-  <!-- Add your favicon links and CSS block here, just like the other pages -->
-  <style>/* ... PASTE YOUR CSS BLOCK HERE ... */</style>
+  <meta name="robots" content="noindex"> <!-- Prevents search engines from indexing this page -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#00315c; --cyan:#0093d4; --yellow:#ffd000; --white:#ffffff; --grey:#f2f4f7; --dark-grey:#081826; --maxw:1140px; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;color:var(--dark-grey);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--cyan);text-decoration:none}
+    .main-content,footer{padding:60px 20px}
+    .container{max-width:var(--maxw);margin:0 auto}
+    h1{font-family:'Montserrat',sans-serif; color: var(--navy); line-height: 1.3; font-size:2.5rem;margin-bottom:1rem;}
+    footer{background:#00172e;text-align:center;font-size:.9rem; color: var(--white);}
+    footer a {color: var(--cyan);}
+    .main-nav { background: #00233f; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .main-nav .nav-logo img { height: 40px; }
+    .main-nav .nav-links a { color: var(--white); font-weight: 600; margin: 0 15px; text-decoration: none; transition: color 0.2s ease-in-out; }
+    .main-nav .nav-links a:hover { color: var(--yellow); }
+  </style>
 </head>
 <body>
-  <!-- PASTE YOUR UPGRADED NAVIGATION BAR HTML HERE -->
+
+  <nav class="main-nav">
+    <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
+      <img src="/assets/hex_logo_no_copy.png" alt="LeakLogic UK Logo">
+    </a>
+    <div class="nav-links">
+      <a href="/product.html">Buy Now</a>
+      <a href="/blog/">Blog & Guides</a>
+      <a href="/symptom-checker.html">Symptom Checker</a>
+    </div>
+  </nav>
+
   <main class="main-content">
-    <div class="container" style="text-align: center;">
+    <div class="container" style="text-align: center; max-width: 700px;">
       <h1>Thank You For Your Order!</h1>
-      <p>Your purchase was successful. We've received your order and are preparing it for shipment.</p>
-      <p>You will receive a confirmation email shortly.</p>
-      <a href="/" style="text-decoration: underline;">Return to Homepage</a>
+      <p style="font-size: 1.2rem;">Your purchase was successful. We've received your order and are preparing it for shipment.</p>
+      <p>You will receive a confirmation email with your order details and tracking information shortly.</p>
+      <a href="/" style="text-decoration: underline; font-weight: 600; margin-top: 20px; display: inline-block;">Return to Homepage</a>
     </div>
   </main>
-  <!-- PASTE YOUR FOOTER HTML HERE -->
+
+  <footer>
+    <div class="container">
+      <p><a href="/">Home</a> | <a href="/blog/">Blog</a> | <a href="/symptom-checker.html">Symptom Checker</a></p>
+      <p><a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+      <p style="margin-top:8px">© 2025 LeakLogic Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
