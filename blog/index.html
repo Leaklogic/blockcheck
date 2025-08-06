@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>UK Automotive Guides & Advice - LeakLogic Blog</title>
+  <meta name="description" content="Expert guides on diagnosing car problems, from blown head gaskets to engine overheating. UK-focused advice from LeakLogic.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://leaklogicuk.co.uk/blog/" />
+   <!-- === ADD YOUR FAVICON CODE HERE === -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- === END FAVICON CODE === -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+ <style>
+    :root {
+      --navy:#00315c;
+      --cyan:#0093d4;
+      --yellow:#ffd000;
+      --white:#ffffff;
+      --grey:#f2f4f7;
+      --dark-grey:#081826;
+      --maxw:1140px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;color:var(--dark-grey);background:var(--grey);line-height:1.5;-webkit-font-smoothing:antialiased;}
+    a{color:var(--cyan);text-decoration:none}
+    .main-content,footer{padding:60px 20px}
+    .container{max-width:var(--maxw);margin:0 auto}
+    h1,h2,h3{font-family:'Montserrat',sans-serif; color: var(--navy);}
+    h1{font-size:2.5rem;margin-bottom:1rem; text-align:center;}
+    
+    /* --- NEW, UPGRADED NAVIGATION STYLES --- */
+    .main-nav { 
+        background: #00233f; 
+        padding: 10px 20px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky; 
+        top: 0; 
+        z-index: 100; 
+    }
+    .main-nav .nav-logo img {
+        height: 40px; /* Adjust size as needed */
+        display: block;
+    }
+    .main-nav .nav-links a { 
+        color: var(--white); 
+        font-weight: 600; 
+        margin: 0 15px; 
+        text-decoration: none; 
+        transition: color 0.2s ease-in-out;
+    }
+    .main-nav .nav-links a:hover { 
+        color: var(--yellow); 
+    }
+    /* --- END NAVIGATION STYLES --- */
+
+    .article-list{
+        max-width:1000px; 
+        margin:40px auto 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    .article-card {
+        background: var(--white);
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        height: 100%;
+    }
+    .article-card:hover {
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        transform: translateY(-5px);
+    }
+    .article-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .article-card-content {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .article-card-content h2 {
+        font-size: 1.5rem;
+        margin: 0 0 10px;
+    }
+    .article-card-content p {
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+    .article-card-content .read-more {
+        font-weight: 600;
+        color: var(--cyan);
+        align-self: flex-start;
+    }
+    footer{background:#00172e;text-align:center;font-size:.9rem; color: var(--white);}
+    footer a {color: var(--cyan);}
+  </style>
+</head>
+<body>
+ <nav class="main-nav">
+  <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
+    <!-- Make sure the path to the logo is correct from the sub-directory -->
+    <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
+  </a>
+  <div class="nav-links">
+    <a href="/blog/">Blog & Guides</a>
+    <a href="/symptom-checker.html">Symptom Checker</a>
+  </div>
+</nav>
+  <main class="main-content">
+    <div class="container">
+      <h1>LeakLogic UK Guides & Advice</h1>
+
+      <div class="article-list">
+
+        <a href="head-gasket-sealant-vs-tester.html" style="text-decoration: none; color: inherit;">
+            <div class="article-card">
+              <img src="../assets/blog/sealant-vs-tester.png" alt="A bottle of head gasket sealant next to a combustion leak tester kit.">
+              <div class="article-card-content">
+                <h2>Head Gasket Sealant vs. Tester: Which Do You Need First?</h2>
+                <p>Considering a head gasket sealant? Learn why you must use a combustion leak tester first to confirm the problem and avoid wasting money.</p>
+                <span class="read-more">Read the guide →</span>
+              </div>
+            </div>
+        </a>
+	  
+		  <a href="how-to-test-a-head-gasket-at-home.html" style="text-decoration: none; color: inherit;">
+		  <div class="article-card">
+			<img src="../assets/blog/how-to-test-featured.jpg" alt="A DIY mechanic using a combustion leak tester on a car engine.">
+			<div class="article-card-content">
+			  <h2>How to Test a Head Gasket at Home – DIY Combustion Leak Test Guide</h2>
+			  <p>Our step-by-step guide to using a head gasket tester kit. Learn how to confirm a blown head gasket in your own driveway in minutes.</p>
+			  <span class="read-more">Read the guide →</span>
+			</div>
+		  </div>
+		</a>
+        
+        <a href="pre-purchase-car-inspection-checklist.html" style="text-decoration: none; color: inherit;">
+          <div class="article-card">
+            <img src="../assets/blog/checklist-featured-image.jpg" alt="A person inspecting the engine of a used car.">
+            <div class="article-card-content">
+              <h2>The Ultimate DIY Pre-Purchase Car Inspection Checklist (UK)</h2>
+              <p>Our comprehensive checklist for inspecting a used car. Cover the exterior, interior, engine, and paperwork to avoid buying a lemon.</p>
+              <span class="read-more">Read the guide →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="7-signs-of-blown-head-gasket.html" style="text-decoration: none; color: inherit;">
+            <div class="article-card">
+              <img src="../assets/blog/symptoms-featured-image.png" alt="White smoke coming from a car's exhaust pipe.">
+              <div class="article-card-content">
+                <h2>Blown Head Gasket Symptoms: 7 Warning Signs You Should Never Ignore</h2>
+                <p>Learn the 7 key warning signs of a blown head gasket, like overheating and milky oil, that every UK driver needs to know about.</p>
+                <span class="read-more">Read the guide →</span>
+              </div>
+            </div>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><a href="/">Home</a>  |  <a href="/blog/">Blog</a></p>
+      <p><a href="/privacy.html">Privacy Policy</a>  |  <a href="/terms.html">Terms of Service</a></p>
+      <p style="margin-top:8px">© 2025 LeakLogic Ltd.  All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

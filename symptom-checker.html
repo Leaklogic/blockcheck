@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Interactive Head Gasket Symptom Checker | LeakLogic UK</title>
+  <meta name="description" content="Use our interactive guide to check the symptoms of a blown head gasket. Learn what white smoke, overheating, coolant loss, and milky oil really mean.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://leaklogicuk.co.uk/symptom-checker.html" />
+   <!-- === ADD YOUR FAVICON CODE HERE === -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- === END FAVICON CODE === -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- UX: Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --navy:#00315c;
+      --cyan:#0093d4;
+      --yellow:#ffd000;
+      --white:#ffffff;
+      --grey:#f2f4f7;
+      --dark-grey:#081826;
+      --maxw:1140px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;color:var(--dark-grey);background:var(--grey);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--cyan);text-decoration:none}
+    .main-content,footer{padding:60px 20px}
+    .container{max-width:var(--maxw);margin:0 auto}
+    h1,h2,h3{font-family:'Montserrat',sans-serif; color: var(--navy); line-height: 1.3;}
+    h1{font-size:2.5rem;margin-bottom:1rem; text-align: center;}
+    h2{font-size:1.5rem; text-align: center; margin-bottom: 20px; color: #666; font-family: 'Inter', sans-serif; font-weight: 400;}
+    h3{font-size: 1rem; text-align: center; margin-bottom: 1.5rem; color: #888; text-transform: uppercase; letter-spacing: 1px;}
+    h3 .fa-solid { margin-right: 8px; color: var(--navy); opacity: 0.6;}
+    .cta-box { background: #e9f5fa; border-left: 5px solid var(--cyan); padding: 30px; margin-top: 60px; border-radius: 0 8px 8px 0; max-width: 800px; }
+    .cta-box h3 { text-align: left; text-transform: none; letter-spacing: 0; color: var(--navy); font-family: 'Montserrat', sans-serif; margin:0 0 10px; font-size: 1.5rem; }
+    .btn{display:inline-block;padding:12px 28px;border-radius:6px;background:var(--yellow);color:#00233f;font-weight:700;margin-top:20px; text-decoration: none;}
+    footer{background:#00172e;text-align:center;font-size:.9rem; color: var(--white);}
+    footer a {color: var(--cyan);}
+    
+    /* --- NEW, UPGRADED NAVIGATION STYLES --- */
+    .main-nav { 
+        background: #00233f; 
+        padding: 10px 20px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky; 
+        top: 0; 
+        z-index: 100; 
+    }
+    .main-nav .nav-logo img {
+        height: 40px; /* Adjust size as needed */
+        display: block;
+    }
+    .main-nav .nav-links a { 
+        color: var(--white); 
+        font-weight: 600; 
+        margin: 0 15px; 
+        text-decoration: none; 
+        transition: color 0.2s ease-in-out;
+    }
+    .main-nav .nav-links a:hover { 
+        color: var(--yellow); 
+    }
+    /* --- END NAVIGATION STYLES --- */
+
+    /* Accordion Styles */
+    .symptom-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 40px; }
+    @media (min-width: 992px) { .symptom-grid { grid-template-columns: 1fr 1fr; } }
+    .symptom-column { display: flex; flex-direction: column; gap: 10px; }
+    
+    details { background: var(--white); border-radius: 6px; border: 1px solid #e0e0e0; transition: background-color 0.2s; }
+    details[open] { background-color: #f8f9fa; }
+    summary { font-weight: 600; color: var(--navy); cursor: pointer; list-style: none; display: flex; align-items: center; padding: 15px 20px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::before { content: '+'; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--cyan); margin-right: 15px; transform: rotate(0); transition: transform 0.3s ease-in-out; }
+    details[open] > summary::before { transform: rotate(180deg); }
+    
+    .details-content { padding: 0 20px 0 55px; border-top: 1px solid #e9ecef; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out, margin 0.4s ease-out; max-height: 0; margin-top: 0; padding-bottom: 0; }
+  </style>
+
+  <!-- SEO: FAQPage Schema for Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What does persistent white smoke from the exhaust mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thick, persistent white smoke after the engine has warmed up is a classic sign of coolant leaking into the combustion chambers and being burned off as steam. This is a primary indicator of a blown head gasket. The best next step is to use a combustion leak tester, like the LeakLogic kit, to confirm the presence of exhaust gases in your cooling system."
+      }
+    },{
+      "@type": "Question",
+      "name": "What does milky, 'mayonnaise' like oil indicate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A creamy, tan sludge under the oil filler cap or on the dipstick is a sure sign that oil and coolant are mixing. This is a very serious symptom of a major head gasket failure. You should stop driving the vehicle immediately to prevent severe engine damage."
+      }
+    },{
+      "@type": "Question",
+      "name": "Why is my coolant bubbling in the reservoir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The bubbles are typically not boiling coolant, but high-pressure exhaust gas being forced into the cooling system through a head gasket breach. This process, called 'gassing,' is direct evidence of a combustion leak. A chemical test can prove this by detecting the CO₂ in these bubbles."
+      }
+    },{
+      "@type": "Question",
+      "name": "My engine is overheating, could it be the head gasket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it's a very common cause. Hot exhaust gases leaking into the cooling system can overwhelm it and cause the temperature to spike. If you've checked for simpler causes like low coolant or a faulty thermostat, a combustion leak test is the most efficient way to confirm or rule out a blown head gasket."
+      }
+    }]
+  }
+  </script>
+
+</head>
+<body>
+
+ <nav class="main-nav">
+  <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
+    <!-- Make sure the path to the logo is correct from the sub-directory -->
+    <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
+  </a>
+  <div class="nav-links">
+    <a href="/blog/">Blog & Guides</a>
+    <a href="/symptom-checker.html">Symptom Checker</a>
+  </div>
+</nav>
+
+  <main class="main-content">
+    <div class="container">
+      <header>
+        <h1>Blown Head Gasket Symptom Checker</h1>
+        <h2>Interactive Guide: Check Your Symptoms & Understand the Cause</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Noticing a problem with your car? Click on the symptom you're experiencing below to get a detailed explanation and find out what your next steps should be.</p>
+      </header>
+
+      <div class="symptom-grid">
+        <div class="symptom-column">
+            <h3><i class="fa-solid fa-smog"></i>Smoke From The Exhaust</h3>
+            <details>
+                <summary>White Smoke</summary>
+                <div class="details-content">
+                    <p><strong>Is it a problem?</strong> A little puff of vapour on a cold morning is normal condensation. However, if you see continuous, thick white smoke after the engine has warmed up, it's a major warning sign.</p>
+                    <p><strong>Your Next Step:</strong> A combustion leak test is essential. The LeakLogic kit will detect the exhaust gases that are pushing coolant out, confirming the diagnosis with a clear blue-to-yellow colour change. This is one of the most common signs we cover in our full <a href="/blog/7-signs-of-blown-head-gasket.html">guide to the 7 signs of a blown head gasket</a>.</p>
+                </div>
+            </details>
+            <details>
+                <summary>Blue or Grey Smoke</summary>
+                <div class="details-content">
+                    <p><strong>What it means:</strong> Blue or grey smoke indicates that engine oil is being burned. This can be caused by worn piston rings, valve seals, or in some cases, a head gasket that has failed between an oil passage and a cylinder.</p>
+                    <p><strong>Your Next Step:</strong> A combustion leak test is still a valuable diagnostic step. If the test is positive (yellow), it suggests a complex head gasket failure. If it's negative (blue), you can rule out a coolant-related breach and focus on rings or seals.</p>
+                </div>
+            </details>
+            <details>
+                <summary>Black Smoke</summary>
+                <div class="details-content">
+                    <p><strong>What it means:</strong> Black smoke means the engine is burning too much fuel (running "rich"). This is almost never a head gasket issue.</p>
+                    <p><strong>Your Next Step:</strong> You do not need a head gasket test for this. Instead, investigate common causes like a clogged air filter, faulty fuel injectors, or a bad sensor.</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="symptom-column">
+            <h3><i class="fa-solid fa-temperature-three-quarters"></i>Engine Overheating</h3>
+             <details>
+                <summary>How to confirm if your engine is overheating</summary>
+                <div class="details-content">
+                    <ul>
+                        <li>The temperature gauge on your dashboard is in the red zone.</li>
+                        <li>Steam is visible from under the bonnet.</li>
+                        <li>You smell a "hot" or sweet antifreeze odour.</li>
+                        <li>You hear unusual ticking or knocking sounds from the engine.</li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary>Consequences of Overheating</summary>
+                <div class="details-content">
+                    <p>Continuous overheating can lead to catastrophic engine damage, including:</p>
+                    <ul>
+                        <li><strong>Blown Head Gasket:</strong> The primary risk. The heat and pressure warp the head, breaking the seal.</li>
+                        <li><strong>Cracked Cylinder Head/Block:</strong> Severe thermal stress can physically crack the engine's metal castings.</li>
+                        <li><strong>Scuffed Pistons:</strong> Pistons can expand beyond their tolerance and scrape against the cylinder walls.</li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary>Checklist for diagnosing overheating</summary>
+                <div class="details-content">
+                    <p>If your engine is overheating but you're not sure why, check these common culprits first:</p>
+                    <ul>
+                        <li>Low Coolant Level</li>
+                        <li>Visible Leaks (hoses, radiator, etc.)</li>
+                        <li>Faulty Thermostat or Radiator Fan</li>
+                        <li>Blocked Radiator</li>
+                    </ul>
+                    <p><strong>Your Next Step:</strong> If all of the above seem fine, the overheating is likely being caused by a head gasket leak. A combustion leak test is the most efficient way to confirm this.</p>
+                </div>
+            </details>
+        </div>
+      </div>
+      
+       <div class="symptom-grid">
+        <div class="symptom-column">
+            <h3><i class="fa-solid fa-droplet-slash"></i>Loss of Coolant & Contamination</h3>
+            <details>
+                <summary>Diagnosing a Coolant Leak</summary>
+                <div class="details-content">
+                    <p>If you are losing coolant, the first step is to identify if the leak is external or internal.</p>
+                    <ul>
+                        <li><strong>External Leak:</strong> You will see puddles of coloured fluid under the car, or visible drips from hoses, the radiator, or the water pump.</li>
+                        <li><strong>Internal Leak:</strong> The coolant level drops, but you can't find any visible evidence of a leak. This is a strong sign the coolant is leaking *inside* the engine.</li>
+                    </ul>
+                </div>
+            </details>
+            <details>
+                <summary>Coolant Leak and Blown Head Gasket</summary>
+                <div class="details-content">
+                    <p>An internal coolant leak is a hallmark symptom of a blown head gasket. The coolant can escape into a cylinder and be burned off (causing white smoke) or leak into the oil (causing milky sludge). </p>
+                    <p><strong>Your Next Step:</strong> If you suspect an internal coolant leak, a combustion leak test is the definitive diagnostic tool. It will confirm if exhaust gases are entering the cooling system through the same breach that coolant is escaping from.</p>
+                </div>
+            </details>
+            <details>
+                <summary>Milky, 'Mayonnaise' Oil</summary>
+                <div class="details-content">
+                    <p><strong>What it means:</strong> A creamy, tan sludge under the oil filler cap is a sure sign that oil and coolant are mixing. This only happens with a significant internal breach, and a blown head gasket is the most common cause.</p>
+                    <p><strong>Your Next Step:</strong> Stop driving immediately. This is a critical symptom. A test will confirm the head gasket failure, but this visual sign is already a near-certainty of a major problem.</p>
+                </div>
+            </details>
+            <details>
+                <summary>Oil in the Coolant</summary>
+                <div class="details-content">
+                     <p>If you look in your coolant reservoir and see a dark, oily film floating on top, or the coolant itself looks like dirty sludge, it's a sign that engine oil is being forced into the cooling system.</p>
+                    <p><strong>What it means:</strong> This happens when a head gasket fails between a high-pressure oil passage and a lower-pressure coolant channel. It's a clear sign of cross-contamination.</p>
+                    <p><strong>Your Next Step:</strong> Like milky oil, this is a serious symptom. A combustion leak test is the best first step to confirm the head gasket is the source of the breach before you commit to a major repair.</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="symptom-column">
+            <h3><i class="fa-solid fa-gauge-high"></i>Engine Performance Issues</h3>
+             <details>
+                <summary>Bubbling in Coolant Reservoir</summary>
+                <div class="details-content">
+                    <p>The bubbles you see in the coolant tank of an overheating car are rarely the coolant actually boiling. It's usually high-pressure exhaust gas being forced into the cooling system through a head gasket breach. This process is called "gassing" and it violently displaces coolant and causes rapid overheating.</p>
+                    <p><strong>Your Next Step:</strong> What you are seeing visually can be proven chemically. A LeakLogic test samples these exact bubbles. If they contain CO₂ from combustion, the test fluid will turn yellow instantly, providing an undeniable diagnosis.</p>
+                </div>
+            </details>
+            <details>
+                <summary>Loss of Power or Rough Idle</summary>
+                <div class="details-content">
+                     <p>A head gasket that fails between two cylinders will cause a loss of compression, leading to a misfiring, shaking engine and poor performance.</p>
+                    <p><strong>What it means:</strong> This can be caused by many things (spark plugs, ignition coils). A combustion leak test helps narrow it down. If the test is positive, the loss of compression is almost certainly related to the head gasket breach.</p>
+                </div>
+            </details>
+			<details>
+                <summary>Engine Knock or Pinging</summary>
+                <div class="details-content">
+                    <p><strong>What it means:</strong> A metallic rattling or pinging sound, especially when accelerating, can be a sign of detonation. This happens when fuel ignites prematurely in the cylinder. Overheating—often caused by a blown head gasket—creates hot spots that trigger this detonation.</p>
+                    <p><strong>Your Next Step:</strong> Engine knock can cause serious piston damage if ignored. A combustion leak test is a crucial step to determine if the overheating that's causing the knock is due to a head gasket failure. If the test is positive, you've found the root cause.</p>
+                </div>
+            </details>
+            <details>
+                <summary>External Coolant or Oil Leaks</summary>
+                <div class="details-content">
+                     <p>Sometimes the gasket fails on an outer edge, causing coolant or oil to visibly weep from the seam between the cylinder head and engine block.</p>
+                    <p><strong>What it means:</strong> A visual inspection is key here, but a combustion leak test is still wise. An external leak can often accompany a small internal leak, and confirming this gives you the full picture of the damage before starting repairs.</p>
+                </div>
+            </details>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h3>Stop Guessing. Start Testing.</h3>
+        <p>Symptoms are just clues. A combustion leak test is the verdict. Before you spend a penny on repairs or risk driving a potentially damaged engine, get the definitive yes/no answer you need. It's the smartest first step for any car owner.</p>
+        <a href="/" class="btn">Get Your LeakLogic Test Kit →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><a href="/">Home</a>  |  <a href="/blog/">Blog & Guides</a> | <a href="/symptom-checker.html">Symptom Checker</a></p>
+      <p><a href="/privacy.html">Privacy Policy</a>  |  <a href="/terms.html">Terms of Service</a></p>
+      <p style="margin-top:8px">© 2025 LeakLogic Ltd.  All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    class Accordion {
+      constructor(el) {
+        this.el = el;
+        this.summary = el.querySelector('summary');
+        this.content = el.querySelector('.details-content');
+        this.summary.addEventListener('click', (e) => this.handleClick(e));
+      }
+
+      handleClick(e) {
+        e.preventDefault();
+        
+        // Close other accordions before opening this one
+        if (!this.el.open) {
+          document.querySelectorAll('details[open]').forEach((openEl) => {
+            if (openEl !== this.el) {
+              const accordion = openEl.accordionInstance;
+              if (accordion) accordion.close();
+            }
+          });
+        }
+        
+        this.toggle();
+      }
+
+      toggle() {
+        if (this.el.open) {
+          this.close();
+        } else {
+          this.open();
+        }
+      }
+
+      open() {
+        this.el.style.overflow = 'hidden';
+        this.el.setAttribute('open', '');
+        
+        const height = this.content.scrollHeight;
+        
+        requestAnimationFrame(() => {
+          this.content.style.maxHeight = `${height}px`;
+          this.content.style.marginTop = '15px';
+          this.content.style.paddingBottom = '20px';
+        });
+      }
+      
+      close() {
+        this.content.style.maxHeight = '0px';
+        this.content.style.marginTop = '0px';
+        this.content.style.paddingBottom = '0px';
+        
+        this.content.addEventListener('transitionend', () => {
+          this.el.removeAttribute('open');
+        }, { once: true });
+      }
+    }
+
+    document.querySelectorAll('details').forEach((el) => {
+      el.accordionInstance = new Accordion(el);
+    });
+  </script>
+
+</body>
+</html>

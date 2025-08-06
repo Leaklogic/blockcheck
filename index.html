@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <title>LeakLogic Block-Check Blue – Rapid Combustion‑Leak Tester</title>
-  <meta name="description" content="LeakLogic Block-Check Blue™ gives you a clear yes/no head‑gasket diagnosis in under two minutes. Non‑toxic, UK‑made kit for petrol and diesel engines.">
+  
+  <!-- SEO: Title now includes primary keywords "Head Gasket Tester Kit" and "UK". -->
+  <title>Head Gasket Tester Kit UK - LeakLogic Combustion Leak Detector</title>
+  
+  <!-- SEO: Meta description now addresses the user's problem and includes secondary keywords. -->
+  <meta name="description" content="Suspect a blown head gasket? LeakLogic's UK-made head gasket tester kit gives a clear yes/no result in 2 mins. For DIY car owners & garages.">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- SEO: Canonical tag tells Google this is the one true version of the page. -->
+  <link rel="canonical" href="https://leaklogicuk.co.uk/" />
+  
+   <!-- === ADD YOUR FAVICON CODE HERE === -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- === END FAVICON CODE === -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -16,6 +32,7 @@
       --dark-grey:#081826;
       --maxw:1140px;
     }
+    html { scroll-behavior: smooth; } /* Makes anchor links scroll smoothly */
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Inter',sans-serif;color:var(--white);background:var(--navy);line-height:1.5;-webkit-font-smoothing:antialiased;}
     a{color:var(--cyan);text-decoration:none}
@@ -36,24 +53,15 @@
     .tagline-section .hex-logo{max-width:400px;margin-bottom:20px;}
     .tagline-section blockquote{font-family:'Montserrat',sans-serif;font-size:5.5rem;font-weight:700;color:var(--white);margin:0 auto;line-height:1.4; margin-top:63px;}
     .gradient-yellow {
-      /* A custom gradient: 50% is the final gradient, 50% is the initial 'mask' color */
       background: linear-gradient(to right, var(--cyan) 0%, var(--yellow) 50%, var(--white) 50%);
       background-size: 200% 100%;
-
-      /* Standard text-clipping properties */
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-
-      /* Initial state: position the gradient to show the solid color part */
       background-position: 100% 0;
-
-      /* Add a smooth transition for the background-position property */
       transition: background-position 1.2s ease-in-out;
     }
-    /* This class will be added by JavaScript to trigger the animation */
     .gradient-yellow.animate {
-      /* Animate to show the gradient part */
       background-position: 0 0;
     }
     .kit{background:var(--grey);color:var(--dark-grey)}
@@ -67,17 +75,104 @@
     .contact p{margin-bottom:1rem;}
     .downloads{background:var(--grey);color:var(--dark-grey)}
     footer{background:#00172e;text-align:center;font-size:.9rem}
+    /* Styles for the new navigation bar */
+    .main-nav { background: #00233f; padding: 15px 20px; text-align: center; position: sticky; top: 0; z-index: 100; }
+    .main-nav a { color: var(--white); font-weight: 600; margin: 0 15px; text-decoration: none; }
+    .main-nav a:hover { color: var(--yellow); }
   </style>
+
+  <!-- SEO: FAQ Schema for Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How do I know if my head gasket is blown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common symptoms of a blown head gasket include engine overheating, white smoke from the exhaust, milky-looking oil (like mayonnaise under the oil cap), and coolant loss with no visible leak. While these are strong signs, the only way to be 100% sure without disassembling the engine is to test for exhaust gases in the cooling system using a combustion leak tester like LeakLogic's Block-Check Blue™."
+      }
+    },{
+      "@type": "Question",
+      "name": "How does a head gasket combustion leak tester work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A chemical combustion leak tester works by sampling the air/gas from your radiator or coolant expansion tank. The special blue test fluid inside the tester reacts to CO₂ (carbon dioxide), a gas present in your car's exhaust. If the fluid turns from blue to yellow, it confirms that exhaust gases are leaking into your cooling system, which is a definitive sign of a blown head gasket or cracked block."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can I use this head gasket tester for my garage or workshop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. LeakLogic Block-Check Blue™ is designed for both DIY home mechanics and professional garages. Its rapid 2-minute result time and clear colour change make it an ideal diagnostic tool for vehicle inspections, pre-purchase checks, and confirming a customer's reported symptoms, saving valuable workshop time."
+      }
+    },{
+      "@type": "Question",
+      "name": "Does it work on diesel engines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Block-Check Blue™ is a universal formula that detects combustion CO₂ in any liquid-cooled petrol, diesel, or LPG engine."
+      }
+    },{
+      "@type": "Question",
+      "name": "Should I use a head gasket sealant or a tester first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always test first. Head gasket sealants (like K-Seal or Steel Seal) only work if there is a confirmed leak. Using a tester like ours first confirms the problem, preventing you from wasting money on a sealant if the issue lies elsewhere. Testing also helps you understand if you have a small leak (where a sealant might work) or a major one that requires mechanical repair."
+      }
+    }]
+  }
+  </script>
+
+  <!-- SEO: Product Schema for Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "LeakLogic Block-Check Blue™ Head Gasket Tester Kit",
+    "image": "https://leaklogicuk.co.uk/assets/hero-kit.png",
+    "description": "A complete DIY combustion leak tester kit for diagnosing blown head gaskets or cracked cylinder heads in petrol and diesel engines. Provides a clear blue-to-yellow result in under 2 minutes. Made in the UK with non-toxic fluid.",
+    "brand": {
+      "@type": "Brand",
+      "name": "LeakLogic"
+    },
+    "sku": "LL-BCB-01",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.ebay.co.uk/itm/396859738655",
+      "priceCurrency": "GBP",
+      "price": "14.99",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "LeakLogic Ltd (on eBay)"
+      }
+    }
+  }
+  </script>
+
 </head>
 <body>
+
+<!-- NEW NAVIGATION BAR -->
+<nav class="main-nav">
+  <a href="/blog/">Blog & Guides</a>
+  <a href="/symptom-checker.html">Symptom Checker</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <header class="hero">
   <div class="container">
     <div class="content">
-      <img src="assets/hex_logo_no_copy.png" alt="LeakLogic logo" style="width:300px;margin-bottom:10px">
+      <!-- SEO: Improved alt text for better image context. -->
+      <img src="assets/hex_logo_no_copy.png" alt="LeakLogic UK Logo" style="width:300px;margin-bottom:10px">
       <h1>Block‑Check Blue™</h1>
-      <p style="font-size:1.25rem;margin-bottom:1.5rem">A 2‑minute head‑gasket diagnosis <br>for any petrol or diesel engine.</p>
-      <a href="https://www.ebay.co.uk/itm/396859738655" class="btn">Buy now on eBay</a>
+      <!-- SEO: Changed the <p> tag to a keyword-rich H2. -->
+      <h2 style="font-size:1.35rem; margin-bottom:1.5rem; font-family:'Inter',sans-serif; font-weight:400;">The 2-Minute Blown Head Gasket Test Kit</h2>
+      <p style="font-size:1.1rem;">For a fast, reliable diagnosis on any petrol, diesel, or LPG engine.</p>
+      <!-- SEO: Added target="_blank" to open eBay in a new tab, keeping users on your site. -->
+      <a href="https://www.ebay.co.uk/itm/396859738655" class="btn" target="_blank" rel="noopener noreferrer">Buy Head Gasket Tester on eBay</a>
     </div>
   </div>
 </header>
@@ -87,12 +182,13 @@
     <div class="container">
       <h2 style="text-align:center;">Why choose LeakLogic?</h2>
       <div class="features-grid">
-        <div class="feature-card"><h3>Fast</h3><p>Clear yes/no result in under <strong>2 minutes</strong> – perfect for quick diagnostics and pre‑purchase inspections.</p></div>
+        <div class="feature-card"><h3>Fast</h3><p>Clear yes/no result in under <strong>2 minutes</strong> – perfect for quick diagnostics and pre‑purchase inspections.</p></div>
         <div class="feature-card"><h3>Crystal‑clear</h3><p>Bold royal‑blue flips to bright yellow, so there’s no room for doubt or shade‑matching errors.</p></div>
         <div class="feature-card"><h3>Safe & Shippable</h3><p>Water‑based, non‑toxic formulation made in the UK. Ships without hazmat surcharges.</p></div>
         <div class="feature-card"><h3>Universal fit</h3><p>Works with petrol, diesel and LPG engines. Tapered silicone bung seals most filler necks.</p></div>
       </div>
-      <img src="assets/color-change.png" alt="LeakLogic fluid changing color from blue to yellow" class="color-change-image">
+      <!-- SEO: Improved alt text for better image context. -->
+      <img src="assets/color-change.png" alt="Head gasket tester fluid changes from blue to yellow, indicating a positive test for a blown head gasket." class="color-change-image">
     </div>
   </section>
 
@@ -105,11 +201,12 @@
   <section class="kit">
     <div class="container">
       <h2>What’s in the kit?</h2>
-      <img src="assets/hero-kit.png" alt="LeakLogic Block-Check Blue kit" class="kit-photo">
+      <!-- SEO: Improved alt text for better image context. -->
+      <img src="assets/hero-kit.png" alt="Components of the LeakLogic Block-Check Blue head gasket test kit." class="kit-photo">
       <ul style="padding-left:20px;">
-        <li>30 mL pre‑mixed Block‑Check Blue™ test fluid (≈ 15 tests)</li>
+        <li>30 mL pre‑mixed Block‑Check Blue™ test fluid (≈ 15 tests)</li>
         <li>Twin‑chamber clear air‑lock with red cap</li>
-        <li>Tapered black silicone bung Ø 11 mm → 24 mm</li>
+        <li>Tapered black silicone bung Ø 11 mm → 24 mm</li>
         <li>Quick‑start instruction card</li>
       </ul>
     </div>
@@ -117,15 +214,34 @@
 
   <section class="faq">
     <div class="container">
-      <h2>Frequently asked</h2>
-      <details><summary>Does it work on diesels?</summary><p>Yes. Block‑Check Blue™ detects combustion CO₂ in any liquid‑cooled petrol, diesel or LPG engine.</p></details>
-      <details><summary>How many tests in one bottle?</summary><p>About 15 – you only need 2 mL per test.</p></details>
-      <details><summary>How long does the fluid last?</summary><p>18 months sealed. Store the bottle cool, dark and tightly capped.</p></details>
-      <details><summary>Is it safe to pour down the drain?</summary><p>Yes. The spent solution is mildly alkaline and non‑toxic; small workshop quantities can be flushed with plenty of water.</p></details>
+      <!-- SEO: More keyword-rich H2 -->
+      <h2>Your Head Gasket Tester Questions Answered</h2>
+      
+      <details>
+        <summary>How do I know if my head gasket is blown?</summary>
+        <p style="margin-top:10px;">Common symptoms of a blown head gasket include engine overheating, white smoke from the exhaust, milky-looking oil (like mayonnaise under the oil cap), and coolant loss with no visible leak. While these are strong signs, the only way to be 100% sure without disassembling the engine is to test for exhaust gases in the cooling system using a combustion leak tester like LeakLogic's Block-Check Blue™.</p>
+      </details>
+      <details>
+        <summary>How does a head gasket combustion leak tester work?</summary>
+        <p style="margin-top:10px;">A chemical combustion leak tester works by sampling the air/gas from your radiator or coolant expansion tank. The special blue test fluid inside the tester reacts to CO₂ (carbon dioxide), a gas present in your car's exhaust. If the fluid turns from blue to yellow, it confirms that exhaust gases are leaking into your cooling system, which is a definitive sign of a blown head gasket or cracked block.</p>
+      </details>
+      <details>
+        <summary>Can I use this head gasket tester for my garage or workshop?</summary>
+        <p style="margin-top:10px;">Absolutely. LeakLogic Block-Check Blue™ is designed for both DIY home mechanics and professional garages. Its rapid 2-minute result time and clear colour change make it an ideal diagnostic tool for vehicle inspections, pre-purchase checks, and confirming a customer's reported symptoms, saving valuable workshop time.</p>
+      </details>
+      <details>
+        <summary>Does it work on diesel engines?</summary>
+        <p style="margin-top:10px;">Yes. Block-Check Blue™ is a universal formula that detects combustion CO₂ in any liquid-cooled petrol, diesel, or LPG engine.</p>
+      </details>
+      <details>
+        <summary>Should I use a head gasket sealant or a tester first?</summary>
+        <p style="margin-top:10px;">Always test first. Head gasket sealants (like K-Seal or Steel Seal) only work if there is a confirmed leak. Using a tester like ours first confirms the problem, preventing you from wasting money on a sealant if the issue lies elsewhere. Testing also helps you understand if you have a small leak (where a sealant might work) or a major one that requires mechanical repair.</p>
+      </details>
     </div>
   </section>
 
-  <section class="contact">
+  <!-- ADDING ID FOR NAV LINK -->
+  <section id="contact" class="contact">
     <div class="container">
       <h2>Contact Us</h2>
       <p>For inquiries, please reach out to us via email or visit us at our registered address.</p>
@@ -142,41 +258,34 @@
   <section class="downloads">
     <div class="container">
       <h2>Downloads</h2>
-      <p><a href="docs/LeakLogic_Block_Check_Blue_SDS.pdf" download>Safety Data Sheet (PDF)</a>  |  <a href="docs/Leak Logic_Block Check Blue.pdf" download>Quick‑start guide (PDF)</a></p>
+      <p><a href="docs/LeakLogic_Block_Check_Blue_SDS.pdf" download>Safety Data Sheet (PDF)</a>  |  <a href="docs/Leak Logic_Block Check Blue.pdf" download>Quick‑start guide (PDF)</a></p>
     </div>
   </section>
 </main>
 
+<!-- UPDATED FOOTER -->
 <footer>
   <div class="container">
-    <p><a href="privacy.html">Privacy Policy</a>  |  <a href="terms.html">Terms of Service</a></p>
-    <p style="margin-top:8px">© 2025 LeakLogic Ltd.  All rights reserved.</p>
-    <p style="margin-top:4px;font-size:.8rem">Made in Britain  |  <a href="mailto:info@leak-logic.co.uk">info@leak‑logic.co.uk</a></p>
+    <p><a href="/">Home</a>  |  <a href="/blog/">Blog & Guides</a></p>
+    <p><a href="privacy.html">Privacy Policy</a>  |  <a href="terms.html">Terms of Service</a></p>
+    <p style="margin-top:8px">© 2025 LeakLogic Ltd.  All rights reserved.</p>
+    <p style="margin-top:4px;font-size:.8rem">Made in Britain  |  <a href="mailto:info@leak‑logic.co.uk">info@leak‑logic.co.uk</a></p>
   </div>
 </footer>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // Select the element we want to animate
     const target = document.querySelector('.gradient-yellow');
-
-    // Set up the Intersection Observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        // If the element is intersecting the viewport (i.e., is on screen)
         if (entry.isIntersecting) {
-          // Add the 'animate' class to trigger the CSS transition
           entry.target.classList.add('animate');
-          // Optional: Stop observing once the animation has been triggered
           observer.unobserve(entry.target);
         }
       });
     }, {
-      // Trigger when 50% of the element is visible
       threshold: 0.5 
     });
-
-    // Start observing the target element
     observer.observe(target);
   });
 </script>
