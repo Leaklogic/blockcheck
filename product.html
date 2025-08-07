@@ -63,7 +63,7 @@
       }
     ],
 
-    "offers": {
+        "offers": {
       "@type": "Offer",
       "url": "https://leaklogicuk.co.uk/product.html",
       "priceCurrency": "GBP",
@@ -71,12 +71,14 @@
       "priceValidUntil": "2025-12-31",
       "availability": "https://schema.org/InStock",
       
-      // === UPDATED AND SIMPLIFIED RETURN POLICY BLOCK ===
+      // === FINAL, CORRECTED RETURN POLICY BLOCK ===
       "hasMerchantReturnPolicy": {
         "@type": "MerchantReturnPolicy",
         "applicableCountry": "GB",
         "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 14
+        "merchantReturnDays": 14,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
       },
 
       "shippingDetails": {
