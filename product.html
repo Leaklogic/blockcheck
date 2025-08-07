@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- SEO: Product Schema -->
+  <!-- SEO: Product Schema for Rich Snippets -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
@@ -27,6 +28,47 @@
     "description": "The definitive DIY combustion leak tester kit for diagnosing blown head gaskets or cracked cylinder heads in petrol, diesel, and LPG engines. Provides a clear blue-to-yellow result in under 2 minutes.",
     "brand": { "@type": "Brand", "name": "LeakLogic" },
     "sku": "LL-BCB-01",
+    
+    // === NEW SECTION ADDED HERE ===
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7", // The average rating, rounded to one decimal place
+      "reviewCount": "3"    // The total number of reviews
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "James P."},
+        "datePublished": "2023-10-26", // Use the date you received the review
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "reviewBody": "Worked perfectly on my Ford Focus. The fluid turned yellow in about 30 seconds and confirmed my suspicions. Saved me a fortune on a garage diagnosis. Highly recommended!"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Sarah L."},
+        "datePublished": "2023-10-25",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "reviewBody": "Brilliant bit of kit. The instructions were clear and the test was easy to do. Thankfully my fluid stayed blue, so my issue was just a faulty thermostat. This tool gave me total peace of mind."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "David K."},
+        "datePublished": "2023-10-24",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4"
+        },
+        "reviewBody": "Does exactly what it says on the tin. Quick and easy to use. It's great value for the price."
+      }
+    ],
+    // === END OF NEW SECTION ===
+
     "offers": {
       "@type": "Offer",
       "url": "https://leaklogicuk.co.uk/product.html",
@@ -50,7 +92,7 @@
   <nav class="main-nav">
     <div class="nav-container">
       <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
-        <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
+        <img src="/assets/logic-leak-logo.png" alt="LeakLogic UK Logo">
       </a>
       <div class="nav-links">
         <a href="/product.html">Buy Now</a>
@@ -64,11 +106,10 @@
     <section class="product-section">
       <div class="product-grid">
         <div class="product-image">
-          <!-- IMPORTANT: Update this with the name of your new product image -->
           <img src="/assets/block-check-blue-packshot.png" alt="LeakLogic Block-Check Blue kit bottle and testing apparatus.">
         </div>
         <div class="product-details">
-          <h1>Block-Check Blue™ Test Kit</h1>
+          <h1>Block-Check Blue™<br>Test Kit</h1>
           <div class="product-price">£9.99</div>
           <p class="product-description">The definitive DIY test for diagnosing a blown head gasket. Get a clear, yes/no result in under two minutes.</p>
           <ul class="product-features">
@@ -79,6 +120,35 @@
           </ul>
           <button id="checkout-button" class="buy-button">Buy Now with Secure Checkout</button>
         </div>
+      </div>
+    </section>
+
+    <!-- === NEW, REFINED REVIEWS SECTION HTML === -->
+    <section class="reviews-section">
+      <div class="container">
+        <h2>What Our Customers Say</h2>
+        
+        <!-- REVIEW 1 -->
+        <div class="review-item">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Worked perfectly on my Ford Focus. The fluid turned yellow in about 30 seconds and confirmed my suspicions. Saved me a fortune on a garage diagnosis. Highly recommended!"</p>
+          <p class="review-author">- James P., Manchester</p>
+        </div>
+  
+        <!-- REVIEW 2 -->
+        <div class="review-item">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Brilliant bit of kit. The instructions were clear and the test was easy to do. Thankfully my fluid stayed blue, so my issue was just a faulty thermostat. This tool gave me total peace of mind."</p>
+          <p class="review-author">- Sarah L., Bristol</p>
+        </div>
+        
+        <!-- REVIEW 3 -->
+        <div class="review-item">
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">"Does exactly what it says on the tin. Quick and easy to use. It's great value for the price."</p>
+          <p class="review-author">- David K., Glasgow</p>
+        </div>
+        
       </div>
     </section>
   </main>

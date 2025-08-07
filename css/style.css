@@ -1,11 +1,11 @@
 /* === GLOBAL STYLES & VARIABLES === */
 :root {
   --navy: #00315c;
-  --dark-navy: #081826; /* A darker navy for nav/footer */
+  --dark-navy: #081826;
   --cyan: #0093d4;
   --yellow: #ffd000;
   --white: #ffffff;
-  --grey: #f2f4f7; /* Main background color */
+  --grey: #f2f4f7;
   --text-color: #333;
   --maxw: 1140px;
 }
@@ -22,15 +22,13 @@ body {
   background-color: var(--grey);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  /* === STICKY FOOTER FIX === */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 main {
-  /* === STICKY FOOTER FIX === */
-  flex-grow: 1; /* Allows the main content to expand and push the footer down */
+  flex-grow: 1;
 }
 
 a {
@@ -44,7 +42,7 @@ a {
   padding: 0 20px;
 }
 
-/* === NEW NAVIGATION STYLES === */
+/* === NAVIGATION STYLES === */
 .main-nav { 
     background-color: var(--dark-navy); 
     padding: 10px 20px; 
@@ -133,7 +131,49 @@ a {
     transform: translateY(-2px);
 }
 
-/* === NEW FOOTER STYLES === */
+/* === NEW, REFINED REVIEWS SECTION STYLES === */
+.reviews-section {
+    padding: 80px 20px;
+    background-color: var(--white); /* White background for contrast */
+}
+.reviews-section .container {
+    max-width: 900px; /* Align with product grid width */
+}
+.reviews-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-navy);
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.review-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 30px 0;
+}
+.review-item:first-of-type {
+    padding-top: 0;
+}
+.review-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.review-stars {
+    font-size: 1rem;
+    letter-spacing: 2px; /* Adds space between stars */
+    color: var(--dark-navy); /* Darker stars look more modern */
+    margin-bottom: 10px;
+}
+.review-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.1rem; /* Slightly larger for readability */
+}
+.review-author {
+    font-weight: 600;
+    color: var(--dark-navy);
+}
+
+/* === FOOTER STYLES === */
 footer {
     background-color: var(--dark-navy);
     color: var(--white);
