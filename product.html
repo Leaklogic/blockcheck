@@ -12,18 +12,20 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- SEO: Product Schema for Rich Snippets -->
+  <!-- Link to the new external stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- SEO: Product Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "LeakLogic Block-Check Blue™ Head Gasket Tester Kit",
-    "image": "https://leaklogicuk.co.uk/assets/hero-kit.png",
-    "description": "The definitive DIY combustion leak tester kit for diagnosing blown head gaskets or cracked cylinder heads in petrol, diesel, and LPG engines. Provides a clear blue-to-yellow result in under 2 minutes. Made in the UK with non-toxic fluid.",
-    "brand": {
-      "@type": "Brand",
-      "name": "LeakLogic"
-    },
+    "image": "https://leaklogicuk.co.uk/assets/product-shot.png",
+    "description": "The definitive DIY combustion leak tester kit for diagnosing blown head gaskets or cracked cylinder heads in petrol, diesel, and LPG engines. Provides a clear blue-to-yellow result in under 2 minutes.",
+    "brand": { "@type": "Brand", "name": "LeakLogic" },
     "sku": "LL-BCB-01",
     "offers": {
       "@type": "Offer",
@@ -33,122 +35,77 @@
       "availability": "https://schema.org/InStock",
       "shippingDetails": {
         "@type": "OfferShippingDetails",
-        "shippingRate": {
-          "@type": "MonetaryAmount",
-          "value": "2.99",
-          "currency": "GBP"
-        },
-        "shippingDestination": {
-          "@type": "DefinedRegion",
-          "addressCountry": "GB"
-        }
+        "shippingRate": { "@type": "MonetaryAmount", "value": "2.99", "currency": "GBP" },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "GB" }
       }
     }
   }
   </script>
 
-  <!-- Stripe.js - Required for checkout -->
+  <!-- Stripe.js -->
   <script src="https://js.stripe.com/v3/"></script>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy:#00315c;
-      --cyan:#0093d4;
-      --yellow:#ffd000;
-      --white:#ffffff;
-      --grey:#f2f4f7;
-      --dark-grey:#081826;
-      --maxw:1140px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter',sans-serif;color:var(--dark-grey);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;}
-    a{color:var(--cyan);text-decoration:none}
-    .main-content,footer{padding:60px 20px}
-    .container{max-width:var(--maxw);margin:0 auto}
-    h1,h2,h3{font-family:'Montserrat',sans-serif; color: var(--navy); line-height: 1.3;}
-    footer{background:#00172e;text-align:center;font-size:.9rem; color: var(--white);}
-    footer a {color: var(--cyan);}
-    .main-nav { background: #00233f; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-    .main-nav .nav-logo img { height: 40px; }
-    .main-nav .nav-links a { color: var(--white); font-weight: 600; margin: 0 15px; text-decoration: none; transition: color 0.2s ease-in-out; }
-    .main-nav .nav-links a:hover { color: var(--yellow); }
-
-    /* Product Page Styles */
-    .product-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; max-width: 900px; margin: 40px auto; }
-    @media (min-width: 768px) { .product-grid { grid-template-columns: 1fr 1fr; } }
-    .product-image img { width: 100%; border-radius: 8px; border: 1px solid #e0e0e0; }
-    .product-details h1 { font-size: 2.25rem; margin-bottom: 15px; }
-    .product-price { font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 20px; }
-    .product-description { margin-bottom: 20px; }
-    .product-features li { margin-bottom: 10px; list-style-type: none; padding-left: 0;}
-    .buy-button { display: inline-block; width: 100%; padding: 18px 28px; border-radius: 8px; background: var(--yellow); color: #00233f; font-weight: 700; font-size: 1.2rem; text-align: center; cursor: pointer; border: none; transition: background-color 0.3s; }
-    .buy-button:hover { background: #ffde59; }
-  </style>
 </head>
 <body>
 
   <nav class="main-nav">
-    <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
-      <img src="/assets/hex_logo_no_copy.png" alt="LeakLogic UK Logo">
-    </a>
-    <div class="nav-links">
-      <a href="/product.html">Buy Now</a>
-      <a href="/blog/">Blog & Guides</a>
-      <a href="/symptom-checker.html">Symptom Checker</a>
+    <div class="nav-container">
+      <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
+        <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
+      </a>
+      <div class="nav-links">
+        <a href="/product.html">Buy Now</a>
+        <a href="/blog/">Blog & Guides</a>
+        <a href="/symptom-checker.html">Symptom Checker</a>
+      </div>
     </div>
   </nav>
 
-  <main class="main-content">
-    <div class="product-grid">
-      <div class="product-image">
-        <img src="/assets/hero-kit.png" alt="The complete LeakLogic Block-Check Blue head gasket test kit.">
+  <main>
+    <section class="product-section">
+      <div class="product-grid">
+        <div class="product-image">
+          <!-- IMPORTANT: Update this with the name of your new product image -->
+          <img src="/assets/block-check-blue-packshot.png" alt="LeakLogic Block-Check Blue kit bottle and testing apparatus.">
+        </div>
+        <div class="product-details">
+          <h1>Block-Check Blue™ Test Kit</h1>
+          <div class="product-price">£9.99</div>
+          <p class="product-description">The definitive DIY test for diagnosing a blown head gasket. Get a clear, yes/no result in under two minutes.</p>
+          <ul class="product-features">
+              <li>✅ Universal fit for petrol, diesel & LPG engines</li>
+              <li>✅ Safe, non-toxic, UK-made formula</li>
+              <li>✅ Includes everything needed for ≈ 15 tests</li>
+              <li>✅ Fast UK Shipping Options Available</li>
+          </ul>
+          <button id="checkout-button" class="buy-button">Buy Now with Secure Checkout</button>
+        </div>
       </div>
-      <div class="product-details">
-        <h1>Block-Check Blue™ Kit</h1>
-        <div class="product-price">£9.99</div>
-        <p class="product-description">The definitive DIY test for diagnosing a blown head gasket. Get a clear, yes/no result in under two minutes.</p>
-        <ul class="product-features">
-            <li>✅ Universal fit for petrol, diesel & LPG engines</li>
-            <li>✅ Safe, non-toxic, UK-made formula</li>
-            <li>✅ Includes everything needed for ≈ 15 tests</li>
-            <li>✅ Fast UK Shipping Options Available</li>
-        </ul>
-        <button id="checkout-button" class="buy-button">Buy Now with Secure Checkout</button>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p><a href="/">Home</a> | <a href="/blog/">Blog</a> | <a href="/symptom-checker.html">Symptom Checker</a></p>
-      <p><a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
-      <p style-="margin-top:8px">© 2025 LeakLogic Ltd. All rights reserved.</p>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/">Home</a> | 
+        <a href="/blog/">Blog</a> | 
+        <a href="/symptom-checker.html">Symptom Checker</a><br>
+        <a href="/privacy.html">Privacy Policy</a> | 
+        <a href="/terms.html">Terms of Service</a>
+      </div>
+      <p>© 2025 LeakLogic Ltd. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    const stripe = Stripe('pk_live_51RtEzvDTb8F5RSDHkYr3zwheLPs2se2foOhPjF3iYj8W79oJvP6G6WKYsqVIrBgM8XAgz1WJlkPSG5GxRNBQ9qud00i1QIeDAW'); 
+    const stripe = Stripe('YOUR_LIVE_STRIPE_PUBLISHABLE_KEY'); 
 
     document.getElementById("checkout-button").addEventListener("click", async function () {
       try {
-        const response = await fetch('/.netlify/functions/create-checkout-session', {
-          method: 'POST',
-        });
-
-        if (!response.ok) {
-            throw new Error(`Server error: ${response.statusText}`);
-        }
-
+        const response = await fetch('/.netlify/functions/create-checkout-session', { method: 'POST' });
+        if (!response.ok) { throw new Error(`Server error: ${response.statusText}`); }
         const session = await response.json();
-
-        const result = await stripe.redirectToCheckout({
-          sessionId: session.id,
-        });
-
-        if (result.error) {
-          alert(result.error.message);
-        }
+        const result = await stripe.redirectToCheckout({ sessionId: session.id });
+        if (result.error) { alert(result.error.message); }
       } catch (error) {
         console.error("Error:", error);
         alert("An error occurred. Please try again.");

@@ -1,0 +1,157 @@
+/* === GLOBAL STYLES & VARIABLES === */
+:root {
+  --navy: #00315c;
+  --dark-navy: #081826; /* A darker navy for nav/footer */
+  --cyan: #0093d4;
+  --yellow: #ffd000;
+  --white: #ffffff;
+  --grey: #f2f4f7; /* Main background color */
+  --text-color: #333;
+  --maxw: 1140px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background-color: var(--grey);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  /* === STICKY FOOTER FIX === */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  /* === STICKY FOOTER FIX === */
+  flex-grow: 1; /* Allows the main content to expand and push the footer down */
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === NEW NAVIGATION STYLES === */
+.main-nav { 
+    background-color: var(--dark-navy); 
+    padding: 10px 20px; 
+    border-bottom: 2px solid var(--navy);
+}
+.main-nav .nav-container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-nav .nav-logo img {
+    height: 40px;
+    display: block;
+}
+.main-nav .nav-links a { 
+    color: var(--white); 
+    font-weight: 600; 
+    margin-left: 25px; 
+    text-decoration: none; 
+    transition: color 0.2s ease-in-out;
+}
+.main-nav .nav-links a:hover { 
+    color: var(--yellow); 
+}
+
+/* === PRODUCT PAGE STYLES === */
+.product-section {
+    padding: 80px 20px;
+}
+.product-grid { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 50px; 
+    align-items: center; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+@media (min-width: 768px) { 
+    .product-grid { grid-template-columns: 1fr 1fr; } 
+}
+.product-image img { 
+    width: 100%; 
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+.product-details h1 { 
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-navy);
+    font-size: 2.25rem; 
+    margin-bottom: 15px; 
+}
+.product-price { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem; 
+    font-weight: 700; 
+    color: var(--dark-navy); 
+    margin-bottom: 20px; 
+}
+.product-description { 
+    margin-bottom: 20px; 
+}
+.product-features li { 
+    margin-bottom: 10px; 
+    list-style-type: none; 
+    padding-left: 0;
+}
+.buy-button { 
+    display: inline-block; 
+    width: 100%; 
+    padding: 18px 28px; 
+    border-radius: 8px; 
+    background: var(--yellow); 
+    color: #00233f; 
+    font-weight: 700; 
+    font-size: 1.2rem; 
+    text-align: center; 
+    cursor: pointer; 
+    border: none; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+.buy-button:hover { 
+    background: #ffde59; 
+    transform: translateY(-2px);
+}
+
+/* === NEW FOOTER STYLES === */
+footer {
+    background-color: var(--dark-navy);
+    color: var(--white);
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+.footer-container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-links {
+    margin-bottom: 15px;
+}
+.footer-links a {
+    color: var(--white);
+    margin: 0 10px;
+}
+.footer-links a:hover {
+    color: var(--yellow);
+}
