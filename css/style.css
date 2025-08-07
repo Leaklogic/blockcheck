@@ -42,6 +42,21 @@ a {
   padding: 0 20px;
 }
 
+
+
+.buy-button {
+    background-color: var(--yellow);
+    color: #00233f;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+    /* === ADD THESE TWO LINES === */
+    text-transform: uppercase!important; 
+    letter-spacing: 0.5px;
+}
+
+
 /* === NAVIGATION STYLES === */
 .main-nav { 
     background-color: var(--dark-navy); 
@@ -195,3 +210,16 @@ footer {
 .footer-links a:hover {
     color: var(--yellow);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
