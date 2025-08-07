@@ -47,7 +47,17 @@
     <priority>0.70</priority>
   </url>
   
-  <!-- Legal Pages -->
+  <!-- Legal & Policy Pages (NEWLY ADDED) -->
+  <url>
+    <loc>https://leaklogicuk.co.uk/shipping-policy.html</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.10</priority>
+  </url>
+  <url>
+    <loc>https://leaklogicuk.co.uk/returns-policy.html</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.10</priority>
+  </url>
   <url>
     <loc>https://leaklogicuk.co.uk/privacy.html</loc>
     <lastmod>2023-10-27</lastmod>
@@ -57,6 +67,18 @@
     <loc>https://leaklogicuk.co.uk/terms.html</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>0.10</priority>
+  </url>
+
+  <!-- Transactional Pages (No index but good to have in sitemap) -->
+  <url>
+    <loc>https://leaklogicuk.co.uk/success.html</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>https://leaklogicuk.co.uk/cancel.html</loc>
+    <lastmod>2023-10-27</lastmod>
+    <priority>0.0</priority>
   </url>
 
 </urlset>
