@@ -24,7 +24,7 @@
 
   <!-- SEO: Product Schema -->
   <!-- SEO: Product Schema for Rich Snippets -->
-  <script type="application/ld+json">
+   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
     "@type": "Product",
@@ -34,56 +34,78 @@
     "brand": { "@type": "Brand", "name": "LeakLogic" },
     "sku": "LL-BCB-01",
     
-    // === NEW SECTION ADDED HERE ===
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.7", // The average rating, rounded to one decimal place
-      "reviewCount": "3"    // The total number of reviews
+      "ratingValue": "4.7",
+      "reviewCount": "3"
     },
     "review": [
       {
         "@type": "Review",
         "author": {"@type": "Person", "name": "James P."},
-        "datePublished": "2023-10-26", // Use the date you received the review
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5"
-        },
+        "datePublished": "2023-10-26",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
         "reviewBody": "Worked perfectly on my Ford Focus. The fluid turned yellow in about 30 seconds and confirmed my suspicions. Saved me a fortune on a garage diagnosis. Highly recommended!"
       },
       {
         "@type": "Review",
         "author": {"@type": "Person", "name": "Sarah L."},
         "datePublished": "2023-10-25",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5"
-        },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
         "reviewBody": "Brilliant bit of kit. The instructions were clear and the test was easy to do. Thankfully my fluid stayed blue, so my issue was just a faulty thermostat. This tool gave me total peace of mind."
       },
       {
         "@type": "Review",
         "author": {"@type": "Person", "name": "David K."},
         "datePublished": "2023-10-24",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4"
-        },
+        "reviewRating": { "@type": "Rating", "ratingValue": "4" },
         "reviewBody": "Does exactly what it says on the tin. Quick and easy to use. It's great value for the price."
       }
     ],
-    // === END OF NEW SECTION ===
 
     "offers": {
       "@type": "Offer",
       "url": "https://leaklogicuk.co.uk/product.html",
       "priceCurrency": "GBP",
       "price": "9.99",
+      "priceValidUntil": "2025-12-31", // NEW: Price validity
       "availability": "https://schema.org/InStock",
+      
+      "hasMerchantReturnPolicy": { // NEW: Link to your returns policy
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "GB",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 14,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnShippingFees"
+      },
+
       "shippingDetails": {
         "@type": "OfferShippingDetails",
-        "shippingRate": { "@type": "MonetaryAmount", "value": "2.99", "currency": "GBP" },
-        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "GB" }
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "2.99",
+          "currency": "GBP"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "GB"
+        },
+        "deliveryTime": { // NEW: Delivery time estimate
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 2,
+                "unitCode": "DAY"
+            },
+            "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 2,
+                "maxValue": 4,
+                "unitCode": "DAY"
+            }
+        }
       }
     }
   }
