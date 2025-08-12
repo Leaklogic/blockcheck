@@ -14,8 +14,8 @@ exports.handler = async (event) => {
       } catch (_) {}
     }
     const session = await stripe.checkout.sessions.create({
-      // Let Stripe offer all eligible methods automatically (Apple Pay, Google Pay, Link, etc.)
-      automatic_payment_methods: { enabled: true },
+      // Offer card (includes Apple Pay/Google Pay/Link via Stripe Checkout) and PayPal
+      payment_method_types: ['card', 'paypal'],
       
       shipping_address_collection: {
         allowed_countries: ['GB'],
@@ -65,9 +65,6 @@ exports.handler = async (event) => {
         },
       ],
       // === END OF UPDATED OPTIONS ===
-
-      // Explicitly keep PayPal in addition to automatic methods
-      payment_method_types: ['paypal'],
 
       line_items: [
         {
