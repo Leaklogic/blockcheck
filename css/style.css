@@ -549,6 +549,21 @@ footer {
     padding: 40px 20px;
     font-size: 0.9rem;
 }
+
+/* Full-width trust band under header */
+.trust-band {
+  background: #eaf3fb;
+  border-bottom: 1px solid #d5e3f2;
+  color: #00315c;
+  font-weight: 600;
+}
+.trust-band .container {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px;
+}
+.trust-band .container span { white-space: nowrap; }
+@media (max-width: 640px) {
+  .trust-band .container { flex-wrap: wrap; justify-content: center; row-gap: 8px; }
+}
 .footer-container {
     max-width: var(--maxw);
     margin: 0 auto;
