@@ -26,6 +26,7 @@
   <!-- === END FAVICON CODE === -->
   
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
   <style>
     :root {
       --navy:#00315c;
@@ -36,118 +37,18 @@
       --dark-grey:#081826;
       --maxw:1140px;
     }
-    html { scroll-behavior: smooth; } /* Makes anchor links scroll smoothly */
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter',sans-serif;color:var(--white);background:var(--navy);line-height:1.5;-webkit-font-smoothing:antialiased;}
-    a{color:var(--cyan);text-decoration:none}
+    html { scroll-behavior: smooth; }
+    body{font-family:'Inter',sans-serif;color:var(--white);background:var(--navy);}    
     header,section,footer{padding:60px 20px}
     .container{max-width:var(--maxw);margin:0 auto}
-    h1,h2,h3{font-family:'Montserrat',sans-serif}
-    h1{font-size:2.5rem;margin-bottom:1rem}
-    h2{font-size:1.75rem;margin:2.5rem 0 1rem}
-    .btn{display:inline-block;padding:12px 28px;border-radius:6px;background:var(--yellow);color:#00233f;font-weight:700;margin-top:20px;text-transform: uppercase; }
-	.btn:hover { 
-    background: #ffde59; 
-    transform: translateY(-2px); transition: background-color 0.3s, transform 0.2s;
-}
-    .hero{background:url('assets/hero-bottle.png') center/cover no-repeat;border-bottom:8px solid var(--cyan);min-height:85vh;display:flex;align-items:center;text-shadow:0 2px 4px rgba(0,0,0,.4)}
-    .hero .content{max-width:600px; text-align:center;}
-    .features{background:var(--navy)}
-    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:40px}
-    .feature-card{background:#012c52;padding:25px;border-radius:8px}
-    .feature-card h3{color:var(--yellow);margin-bottom:.5rem}
-    .color-change-image{display:block;max-width:100%;margin:50px auto 0;border-radius:8px;border:4px solid #012c52;}
-    .tagline-section{text-align:center;padding:80px 20px;}
-    .tagline-section .hex-logo{max-width:400px;margin-bottom:20px;}
-    .tagline-section blockquote{font-family:'Montserrat',sans-serif;font-size:5.5rem;font-weight:700;color:var(--white);margin:0 auto;line-height:1.4; margin-top:63px;}
-    .gradient-yellow {
-      background: linear-gradient(to right, var(--cyan) 0%, var(--yellow) 50%, var(--white) 50%);
-      background-size: 200% 100%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      background-position: 100% 0;
-      transition: background-position 1.2s ease-in-out;
-    }
-    .gradient-yellow.animate {
-      background-position: 0 0;
-    }
-    .kit{background:var(--grey);color:var(--dark-grey)}
-    .kit h2{color:var(--navy)}
-    .kit .kit-photo{display:block;max-width:50%;margin:0 auto 20px;border-radius:8px;}
-    .faq{background:var(--navy)}
-    details{background:#012c52;padding:18px;border-radius:6px;margin-top:10px}
-    summary{font-weight:600;cursor:pointer}
-    .contact{background:var(--grey);color:var(--dark-grey)}
-    .contact h2{color:var(--navy)}
-    .contact p{margin-bottom:1rem;}
-    .downloads{background:var(--grey);color:var(--dark-grey)}
-    footer{background:#00172e;text-align:center;font-size:.9rem}
-    /* Styles for the new navigation bar */
-    .main-nav { background: #00233f; padding: 12px 20px; position: sticky; top: 0; z-index: 100; }
-    .main-nav .nav-container { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-    .main-nav .nav-logo img { height: 40px; display: block; }
-    .main-nav .nav-links a { color: var(--white); font-weight: 600; margin-left: 15px; text-decoration: none; }
-    .main-nav .nav-links a:hover { color: var(--yellow); }
-    .main-nav .nav-toggle { display: none; background: transparent; border: 1px solid rgba(255,255,255,0.35); color: var(--white); padding: 6px 10px; border-radius: 6px; font-weight: 600; cursor: pointer; }
 
-    /* Logo switching based on screen size - more specific to override nav-logo img */
+    /* Only homepage-specific logo switching kept here in case CSS file is cached */
     .main-nav .nav-logo .logo-desktop { display: block; }
     .main-nav .nav-logo .logo-mobile { display: none; }
-
-    /* Mobile tweaks */
-    @media (max-width: 640px) {
+    @media (max-width:640px){
       header,section,footer{padding:40px 16px}
-      h1{font-size:2rem}
-      h2{font-size:1.35rem;margin:1.5rem 0 0.75rem}
-      .hero{min-height:70vh}
-      .tagline-section blockquote{font-size:2.25rem;}
-      .kit .kit-photo{max-width:80%}
-      
-      /* Logo switching for mobile - more specific to override nav-logo img */
       .main-nav .nav-logo .logo-desktop { display: none; }
       .main-nav .nav-logo .logo-mobile { display: block; }
-      
-      /* mobile nav */
-      .main-nav { padding: 8px 14px; position: relative; }
-      .main-nav .nav-container { 
-        flex-direction: row; 
-        align-items: center; 
-        justify-content: space-between; 
-        gap: 0; 
-        position: relative;
-      }
-      .main-nav .nav-logo img { height: 28px; }
-      .main-nav .nav-toggle { 
-        display: block; 
-        align-self: center; 
-        margin-left: auto; 
-        position: relative;
-        z-index: 101;
-      }
-      .main-nav .nav-links { 
-        display: none; 
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 200px;
-        background: #00233f;
-        border: 1px solid #00315c;
-        border-radius: 6px;
-        padding: 12px;
-        margin-top: 8px;
-        z-index: 100;
-      }
-      .main-nav .nav-links.open { 
-        display: flex; 
-        flex-direction: column; 
-        align-items: flex-end; 
-      }
-      .main-nav .nav-links a { 
-        margin: 0 0 8px 0; 
-        white-space: nowrap;
-      }
-      .main-nav .nav-links a:last-child { margin-bottom: 0; }
     }
   </style>
 
@@ -207,7 +108,7 @@
       <img src="/assets/hex_logo_no_copy.png" alt="LeakLogic UK Logo" class="logo-desktop">
       <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo" class="logo-mobile">
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
     <div id="primary-nav" class="nav-links">
       <a href="/blog/">Blog & Guides</a>
       <a href="/symptom-checker.html">Symptom Checker</a>
@@ -312,7 +213,7 @@
   <section class="downloads">
     <div class="container">
       <h2>Downloads</h2>
-      <p><a href="docs/LeakLogic_Block_Check_Blue_SDS.pdf" download>Safety Data Sheet (PDF)</a>  |  <a href="docs/block-check-blue-quick-start.pdf" download>Quick‑start guide (PDF)</a></p>
+      <p><a href="docs/block-check-blue-quick-start.pdf" download>Quick‑start guide (PDF)</a></p>
     </div>
   </section>
 </main>

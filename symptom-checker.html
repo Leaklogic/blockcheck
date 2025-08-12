@@ -17,6 +17,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- === END FAVICON CODE === -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
   <!-- UX: Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   
@@ -50,50 +51,7 @@
     footer{background:#00172e;text-align:center;font-size:.9rem; color: var(--white);}
     footer a {color: var(--cyan);}
     
-    /* --- NEW, UPGRADED NAVIGATION STYLES --- */
-    .main-nav { 
-        background: #00233f; 
-        padding: 10px 20px; 
-        position: sticky; 
-        top: 0; 
-        z-index: 100; 
-    }
-    .main-nav .nav-container { 
-        max-width: var(--maxw); 
-        margin: 0 auto; 
-        display: flex; 
-        align-items: center; 
-        justify-content: space-between; 
-    }
-    .main-nav .nav-logo img {
-        height: 40px;
-        display: block;
-    }
-    .main-nav .nav-links { 
-        display: flex;
-        align-items: center;
-    }
-    .main-nav .nav-links a { 
-        color: var(--white); 
-        font-weight: 600; 
-        margin-left: 15px; 
-        text-decoration: none; 
-        transition: color 0.2s ease-in-out;
-    }
-    .main-nav .nav-links a:hover { 
-        color: var(--yellow); 
-    }
-    .main-nav .nav-toggle { 
-        display: none; 
-        background: transparent; 
-        border: 1px solid rgba(255,255,255,0.35); 
-        color: var(--white); 
-        padding: 6px 10px; 
-        border-radius: 6px; 
-        font-weight: 600; 
-        cursor: pointer; 
-    }
-    /* --- END NAVIGATION STYLES --- */
+    /* Nav styles are unified in /css/style.css */
 
     /* Accordion Styles */
     .symptom-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 40px; }
@@ -114,47 +72,7 @@
       .main-content, footer { padding: 40px 16px; }
       h1 { font-size: 2rem; }
       h2 { font-size: 1.35rem; margin: 1.5rem 0 0.75rem; }
-      /* nav fixes for small screens incl. iPhone SE */
-      .main-nav { padding: 8px 12px; position: relative; }
-      .main-nav .nav-container { 
-        flex-direction: row; 
-        align-items: center; 
-        justify-content: space-between; 
-        gap: 0; 
-        position: relative;
-      }
-      .main-nav .nav-logo img { height: 28px; }
-      .main-nav .nav-toggle { 
-        display: block; 
-        align-self: center; 
-        margin-left: auto; 
-        position: relative;
-        z-index: 101;
-      }
-      .main-nav .nav-links { 
-        display: none; 
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 200px;
-        background: #00233f;
-        border: 1px solid #00315c;
-        border-radius: 6px;
-        padding: 12px;
-        margin-top: 8px;
-        z-index: 100;
-      }
-      .main-nav .nav-links.open { 
-        display: flex; 
-        flex-direction: column; 
-        align-items: flex-end; 
-      }
-      .main-nav .nav-links a { 
-        margin: 0 0 8px 0; 
-        font-size: 0.9rem; 
-        white-space: nowrap;
-      }
-      .main-nav .nav-links a:last-child { margin-bottom: 0; }
+      /* Mobile nav uses /css/style.css */
     }
   </style>
 
@@ -203,7 +121,7 @@
     <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
       <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
           <div id="primary-nav" class="nav-links">
         <a href="/blog/">Blog & Guides</a>
         <a href="/product.html" class="nav-button">Buy Now</a>
@@ -434,18 +352,21 @@
         this.el.style.overflow = 'hidden';
         this.el.setAttribute('open', '');
         
-        const height = this.content.scrollHeight;
-        
         requestAnimationFrame(() => {
-          this.content.style.maxHeight = `${height}px`;
+          // Apply paddings first so scrollHeight includes them
           this.content.style.marginTop = '15px';
+          this.content.style.paddingTop = '16px';
           this.content.style.paddingBottom = '20px';
+          // Now measure the full height with padding
+          const heightWithPadding = this.content.scrollHeight;
+          this.content.style.maxHeight = `${heightWithPadding}px`;
         });
       }
       
       close() {
         this.content.style.maxHeight = '0px';
         this.content.style.marginTop = '0px';
+        this.content.style.paddingTop = '0px';
         this.content.style.paddingBottom = '0px';
         
         this.content.addEventListener('transitionend', () => {

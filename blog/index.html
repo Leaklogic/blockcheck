@@ -17,7 +17,8 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- === END FAVICON CODE === -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
- <style>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
     :root {
       --navy:#00315c;
       --cyan:#0093d4;
@@ -35,96 +36,9 @@
     h1,h2,h3{font-family:'Montserrat',sans-serif; color: var(--navy);}
     h1{font-size:2.5rem;margin-bottom:1rem; text-align:center;}
     
-    /* --- NEW, UPGRADED NAVIGATION STYLES --- */
-    .main-nav { 
-        background: #00233f; 
-        padding: 10px 20px; 
-        position: sticky; 
-        top: 0; 
-        z-index: 100; 
-    }
-    .main-nav .nav-container { 
-        max-width: var(--maxw); 
-        margin: 0 auto; 
-        display: flex; 
-        align-items: center; 
-        justify-content: space-between; 
-    }
-    .main-nav .nav-logo img {
-        height: 40px;
-        display: block;
-    }
-    .main-nav .nav-links { 
-        display: flex;
-        align-items: center;
-    }
-    .main-nav .nav-links a { 
-        color: var(--white); 
-        font-weight: 600; 
-        margin-left: 15px; 
-        text-decoration: none; 
-        transition: color 0.2s ease-in-out;
-    }
-    .main-nav .nav-links a:hover { 
-        color: var(--yellow); 
-    }
-    .main-nav .nav-toggle { 
-        display: none; 
-        background: transparent; 
-        border: 1px solid rgba(255,255,255,0.35); 
-        color: var(--white); 
-        padding: 6px 10px; 
-        border-radius: 6px; 
-        font-weight: 600; 
-        cursor: pointer; 
-    }
-    /* --- END NAVIGATION STYLES --- */
+    /* Nav styles are unified in /css/style.css */
 
-    .article-list{
-        max-width:1000px; 
-        margin:40px auto 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-    .article-card {
-        background: var(--white);
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-        height: 100%;
-    }
-    .article-card:hover {
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        transform: translateY(-5px);
-    }
-    .article-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-    .article-card-content {
-        padding: 25px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-    .article-card-content h2 {
-        font-size: 1.5rem;
-        margin: 0 0 10px;
-    }
-    .article-card-content p {
-        margin-bottom: 20px;
-        flex-grow: 1;
-    }
-    .article-card-content .read-more {
-        font-weight: 600;
-        color: var(--cyan);
-        align-self: flex-start;
-    }
+    /* Article card/list styles moved to /css/style.css */
     footer{background:#00172e;text-align:center;font-size:.9rem; color: var(--white);}
     footer a {color: var(--cyan);}
 
@@ -137,47 +51,7 @@
       .article-card-content { padding: 18px; }
       .article-card-content h2 { font-size: 1.25rem; }
 
-      /* nav fixes for small screens incl. iPhone SE */
-      .main-nav { padding: 8px 12px; position: relative; }
-      .main-nav .nav-container { 
-        flex-direction: row; 
-        align-items: center; 
-        justify-content: space-between; 
-        gap: 0; 
-        position: relative;
-      }
-      .main-nav .nav-logo img { height: 28px; }
-      .main-nav .nav-toggle { 
-        display: block; 
-        align-self: center; 
-        margin-left: auto; 
-        position: relative;
-        z-index: 101;
-      }
-      .main-nav .nav-links { 
-        display: none; 
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 200px;
-        background: #00233f;
-        border: 1px solid #00315c;
-        border-radius: 6px;
-        padding: 12px;
-        margin-top: 8px;
-        z-index: 100;
-      }
-      .main-nav .nav-links.open { 
-        display: flex; 
-        flex-direction: column; 
-        align-items: flex-end; 
-      }
-      .main-nav .nav-links a { 
-        margin: 0 0 8px 0; 
-        font-size: 0.9rem; 
-        white-space: nowrap;
-      }
-      .main-nav .nav-links a:last-child { margin-bottom: 0; }
+      /* Mobile nav uses /css/style.css */
     }
   </style>
 </head>
@@ -187,7 +61,7 @@
     <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
       <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
           <div id="primary-nav" class="nav-links">
         <a href="/symptom-checker.html">Symptom Checker</a>
         <a href="/product.html" class="nav-button">Buy Now</a>

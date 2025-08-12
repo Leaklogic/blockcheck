@@ -24,3 +24,6 @@ http://leaklogicuk.co.uk/*        https://leaklogicuk.co.uk/:splat   301!
 /blog/signs-of-blown-head-gasket.html           /blog/7-signs-of-blown-head-gasket.html             301
 
 
+## Headers
+/docs/LeakLogic_Block_Check_Blue_SDS.pdf
+  X-Robots-Tag: noindex, nofollow, noarchive
