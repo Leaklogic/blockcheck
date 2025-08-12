@@ -403,6 +403,11 @@ body.blog-article {
   gap: 10px;
   margin-top: 10px;
 }
+.added-toast {
+  position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%);
+  background: #00233f; color: #fff; padding: 10px 14px; border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25); font-weight: 600; display: none; z-index: 300;
+}
 .product-actions-break { flex-basis: 100%; }
 .product-actions label { font-weight: 600; color: var(--dark-navy); }
 .qty-input {
