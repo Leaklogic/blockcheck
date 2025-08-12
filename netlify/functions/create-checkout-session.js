@@ -71,7 +71,7 @@ exports.handler = async (event) => {
           price_data: {
             currency: 'gbp',
             product_data: {
-              name: 'LeakLogic Block-Check Blue™ Kit',
+              name: 'LeakLogic Block-Check Blue™ Diagnostic Test Kit',
               images: [`${YOUR_DOMAIN}/assets/hero-kit.png`], 
             },
             // === UPDATED PRODUCT PRICE ===

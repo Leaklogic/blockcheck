@@ -429,16 +429,28 @@ body.blog-article {
 }
 .product-actions .button { flex: 0 0 auto; }
 .product-actions .button-checkout { flex: 1 1 100%; }
+.product-actions .button-cart { margin-left: auto; }
 
 /* Payment logos/badges under actions */
-.pay-logos { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; flex-basis: 100%; }
+.pay-logos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: nowrap; /* keep on one line */
+  flex-basis: 100%;
+  justify-content: space-between; /* align left and right edges */
+  width: 100%;
+}
 .badge {
   display: inline-flex; align-items: center; justify-content: center;
-  height: 28px; padding: 0 10px; border-radius: 6px; font-weight: 700; font-size: 12px; color: #fff;
+  height: 28px; padding: 0 10px; border-radius: 6px; font-weight: 700; font-size: 12px; color: #fff; text-align: center;
 }
 .badge-stripe { background: #635bff; }
 .badge-paypal { background: #003087; }
 .badge-gpay { background: #000000; }
+.badge-apple { background: #000000; }
+.pay-logos .badge { flex: 1 1 0; min-width: 0; }
 .button:hover { transform: translateY(-2px); }
 .button:focus { outline: 2px solid rgba(0,0,0,0.15); outline-offset: 2px; }
 .button-cart { background: var(--yellow); color: #00233f; padding: 0 10px; font-size: 1rem; white-space: nowrap; }
