@@ -1,0 +1,26 @@
+## Domain canonicalization (force apex + https)
+https://www.leaklogicuk.co.uk/*   https://leaklogicuk.co.uk/:splat   301!
+http://www.leaklogicuk.co.uk/*    https://leaklogicuk.co.uk/:splat   301!
+http://leaklogicuk.co.uk/*        https://leaklogicuk.co.uk/:splat   301!
+
+/blog.html  /blog/  301
+
+# PDF: maintain stable link without spaces
+/docs/Leak%20Logic_Block%20Check%20Blue.pdf   /docs/block-check-blue-quick-start.pdf   301!
+/docs/block-check-blue-quick-start.pdf   /docs/Leak Logic_Block Check Blue.pdf   200
+
+# Enforce canonical .html versions for policy pages
+/shipping-policy    /shipping-policy.html   301
+/returns-policy     /returns-policy.html    301
+/privacy            /privacy.html           301
+/terms              /terms.html             301
+
+# Blog: enforce .html canonical for posts and consolidate legacy slug
+/blog/how-to-test-a-head-gasket-at-home         /blog/how-to-test-a-head-gasket-at-home.html        301
+/blog/pre-purchase-car-inspection-checklist     /blog/pre-purchase-car-inspection-checklist.html    301
+/blog/head-gasket-sealant-vs-tester             /blog/head-gasket-sealant-vs-tester.html            301
+/blog/7-signs-of-blown-head-gasket              /blog/7-signs-of-blown-head-gasket.html             301
+/blog/signs-of-blown-head-gasket                /blog/7-signs-of-blown-head-gasket.html             301
+/blog/signs-of-blown-head-gasket.html           /blog/7-signs-of-blown-head-gasket.html             301
+
+
