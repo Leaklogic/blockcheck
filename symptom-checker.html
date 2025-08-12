@@ -54,26 +54,44 @@
     .main-nav { 
         background: #00233f; 
         padding: 10px 20px; 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         position: sticky; 
         top: 0; 
         z-index: 100; 
     }
+    .main-nav .nav-container { 
+        max-width: var(--maxw); 
+        margin: 0 auto; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+    }
     .main-nav .nav-logo img {
-        height: 40px; /* Adjust size as needed */
+        height: 40px;
         display: block;
+    }
+    .main-nav .nav-links { 
+        display: flex;
+        align-items: center;
     }
     .main-nav .nav-links a { 
         color: var(--white); 
         font-weight: 600; 
-        margin: 0 15px; 
+        margin-left: 15px; 
         text-decoration: none; 
         transition: color 0.2s ease-in-out;
     }
     .main-nav .nav-links a:hover { 
         color: var(--yellow); 
+    }
+    .main-nav .nav-toggle { 
+        display: none; 
+        background: transparent; 
+        border: 1px solid rgba(255,255,255,0.35); 
+        color: var(--white); 
+        padding: 6px 10px; 
+        border-radius: 6px; 
+        font-weight: 600; 
+        cursor: pointer; 
     }
     /* --- END NAVIGATION STYLES --- */
 
@@ -90,6 +108,54 @@
     details[open] > summary::before { transform: rotate(180deg); }
     
     .details-content { padding: 0 20px 0 55px; border-top: 1px solid #e9ecef; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out, margin 0.4s ease-out; max-height: 0; margin-top: 0; padding-bottom: 0; }
+    
+    /* Mobile tweaks for iPhone SE and small screens */
+    @media (max-width: 640px) {
+      .main-content, footer { padding: 40px 16px; }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.35rem; margin: 1.5rem 0 0.75rem; }
+      /* nav fixes for small screens incl. iPhone SE */
+      .main-nav { padding: 8px 12px; position: relative; }
+      .main-nav .nav-container { 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between; 
+        gap: 0; 
+        position: relative;
+      }
+      .main-nav .nav-logo img { height: 28px; }
+      .main-nav .nav-toggle { 
+        display: block; 
+        align-self: center; 
+        margin-left: auto; 
+        position: relative;
+        z-index: 101;
+      }
+      .main-nav .nav-links { 
+        display: none; 
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        background: #00233f;
+        border: 1px solid #00315c;
+        border-radius: 6px;
+        padding: 12px;
+        margin-top: 8px;
+        z-index: 100;
+      }
+      .main-nav .nav-links.open { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-end; 
+      }
+      .main-nav .nav-links a { 
+        margin: 0 0 8px 0; 
+        font-size: 0.9rem; 
+        white-space: nowrap;
+      }
+      .main-nav .nav-links a:last-child { margin-bottom: 0; }
+    }
   </style>
 
   <!-- SEO: FAQPage Schema for Rich Snippets -->
@@ -133,15 +199,18 @@
 <body>
 
  <nav class="main-nav">
-  <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
-    <!-- Make sure the path to the logo is correct from the sub-directory -->
-    <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
-  </a>
-  <div class="nav-links">
-    <a href="/blog/">Blog & Guides</a>
-    <a href="/symptom-checker.html">Symptom Checker</a>
+  <div class="nav-container">
+    <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
+      <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+          <div id="primary-nav" class="nav-links">
+        <a href="/blog/">Blog & Guides</a>
+        <a href="/product.html" class="nav-button">Buy Now</a>
+        <a href="/#contact">Contact</a>
+      </div>
   </div>
-</nav>
+ </nav>
 
   <main class="main-content">
     <div class="container">
@@ -316,6 +385,17 @@
       <p style="margin-top: 20px;">© 2025 LeakLogic Ltd. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    (function(){
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.getElementById('primary-nav');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function(){
+        const isOpen = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    })();
+  </script>
 
   <script>
     class Accordion {

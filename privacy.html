@@ -15,10 +15,11 @@
   <!-- A fallback for older browsers -->
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- === END FAVICON CODE === -->
+  <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {--navy:#00315c;--grey:#f2f4f7;--dark-grey:#081826;--maxw:800px;}
-    body{font-family:'Inter',sans-serif;color:var(--dark-grey);background:var(--grey);line-height:1.6;-webkit-font-smoothing:antialiased;padding:40px 20px;}
+    body{font-family:'Inter',sans-serif;color:var(--dark-grey);background:var(--grey);line-height:1.6;-webkit-font-smoothing:antialiased;}
     .container{max-width:var(--maxw);margin:0 auto;background:#ffffff;padding:40px;border-radius:8px;}
     h1,h2{font-family:'Montserrat',sans-serif;color:var(--navy);margin-bottom:1rem;}
     p,ul{margin-bottom:1.5rem;}
@@ -27,6 +28,21 @@
   </style>
 </head>
 <body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
+        <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <div id="primary-nav" class="nav-links">
+        <a href="/blog/">Blog & Guides</a>
+        <a href="/symptom-checker.html">Symptom Checker</a>
+        <a href="/product.html" class="nav-button">Buy Now</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
   <div class="container">
     <h1>Privacy Policy</h1>
     <p><em>Last updated: July 24, 2025</em></p>
@@ -47,5 +63,19 @@
     <br>
     <a href="index.html">← Back to Main Site</a>
   </div>
+
+  <script>
+    // Mobile hamburger toggle
+    (function(){
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.getElementById('primary-nav');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function(){
+        const isOpen = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    })();
+  </script>
+
 </body>
 </html>

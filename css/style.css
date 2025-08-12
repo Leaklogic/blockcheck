@@ -70,6 +70,16 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+.main-nav .nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
 .main-nav .nav-logo img {
     height: 40px;
     display: block;
@@ -223,3 +233,56 @@ footer {
 
 
 
+/* === MOBILE OPTIMIZATIONS === */
+@media (max-width: 640px) {
+  .main-nav { padding: 8px 14px; position: relative; }
+  .main-nav .nav-container { 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 0; 
+    position: relative;
+  }
+  .main-nav .nav-logo img { height: 28px; }
+  .main-nav .nav-toggle { 
+    display: block; 
+    align-self: center; 
+    margin-left: auto; 
+    position: relative;
+    z-index: 101;
+  }
+  .main-nav .nav-links { 
+    display: none; 
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: var(--dark-navy);
+    border: 1px solid var(--navy);
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 8px;
+    z-index: 100;
+  }
+  .main-nav .nav-links.open { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end; 
+  }
+  .main-nav .nav-links a { 
+    margin: 0 0 8px 0; 
+    font-size: 0.95rem; 
+    white-space: nowrap;
+  }
+  .main-nav .nav-links a:last-child { margin-bottom: 0; }
+
+  .product-section { padding: 40px 16px; }
+  .product-grid { gap: 30px; }
+  .product-details h1 { font-size: 1.75rem; }
+  .product-price { font-size: 1.5rem; }
+  .buy-button { font-size: 1rem; padding: 14px 20px; }
+
+  .reviews-section { padding: 40px 16px; }
+  .reviews-section h2 { font-size: 1.5rem; margin-bottom: 24px; }
+  .review-item { padding: 20px 0; }
+}

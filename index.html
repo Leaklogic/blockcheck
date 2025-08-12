@@ -84,9 +84,71 @@
     .downloads{background:var(--grey);color:var(--dark-grey)}
     footer{background:#00172e;text-align:center;font-size:.9rem}
     /* Styles for the new navigation bar */
-    .main-nav { background: #00233f; padding: 15px 20px; text-align: center; position: sticky; top: 0; z-index: 100; }
-    .main-nav a { color: var(--white); font-weight: 600; margin: 0 15px; text-decoration: none; }
-    .main-nav a:hover { color: var(--yellow); }
+    .main-nav { background: #00233f; padding: 12px 20px; position: sticky; top: 0; z-index: 100; }
+    .main-nav .nav-container { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .main-nav .nav-logo img { height: 40px; display: block; }
+    .main-nav .nav-links a { color: var(--white); font-weight: 600; margin-left: 15px; text-decoration: none; }
+    .main-nav .nav-links a:hover { color: var(--yellow); }
+    .main-nav .nav-toggle { display: none; background: transparent; border: 1px solid rgba(255,255,255,0.35); color: var(--white); padding: 6px 10px; border-radius: 6px; font-weight: 600; cursor: pointer; }
+
+    /* Logo switching based on screen size - more specific to override nav-logo img */
+    .main-nav .nav-logo .logo-desktop { display: block; }
+    .main-nav .nav-logo .logo-mobile { display: none; }
+
+    /* Mobile tweaks */
+    @media (max-width: 640px) {
+      header,section,footer{padding:40px 16px}
+      h1{font-size:2rem}
+      h2{font-size:1.35rem;margin:1.5rem 0 0.75rem}
+      .hero{min-height:70vh}
+      .tagline-section blockquote{font-size:2.25rem;}
+      .kit .kit-photo{max-width:80%}
+      
+      /* Logo switching for mobile - more specific to override nav-logo img */
+      .main-nav .nav-logo .logo-desktop { display: none; }
+      .main-nav .nav-logo .logo-mobile { display: block; }
+      
+      /* mobile nav */
+      .main-nav { padding: 8px 14px; position: relative; }
+      .main-nav .nav-container { 
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between; 
+        gap: 0; 
+        position: relative;
+      }
+      .main-nav .nav-logo img { height: 28px; }
+      .main-nav .nav-toggle { 
+        display: block; 
+        align-self: center; 
+        margin-left: auto; 
+        position: relative;
+        z-index: 101;
+      }
+      .main-nav .nav-links { 
+        display: none; 
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        background: #00233f;
+        border: 1px solid #00315c;
+        border-radius: 6px;
+        padding: 12px;
+        margin-top: 8px;
+        z-index: 100;
+      }
+      .main-nav .nav-links.open { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-end; 
+      }
+      .main-nav .nav-links a { 
+        margin: 0 0 8px 0; 
+        white-space: nowrap;
+      }
+      .main-nav .nav-links a:last-child { margin-bottom: 0; }
+    }
   </style>
 
   <!-- SEO: FAQ Schema for Rich Snippets -->
@@ -140,11 +202,19 @@
 
 <!-- NEW NAVIGATION BAR -->
 <nav class="main-nav">
-  <a href="/blog/">Blog & Guides</a>
-  <a href="/symptom-checker.html">Symptom Checker</a>
-        <a href="/product.html" class="nav-button">Buy Now</a>
-
-  <a href="#contact">Contact</a>
+  <div class="nav-container">
+    <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
+      <img src="/assets/hex_logo_no_copy.png" alt="LeakLogic UK Logo" class="logo-desktop">
+      <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo" class="logo-mobile">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div id="primary-nav" class="nav-links">
+      <a href="/blog/">Blog & Guides</a>
+      <a href="/symptom-checker.html">Symptom Checker</a>
+      <a href="/product.html" class="nav-button">Buy Now</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </nav>
 
 <header class="hero">
@@ -273,6 +343,18 @@
     observer.observe(target);
   });
 </script>
+  <script>
+    // Mobile hamburger toggle
+    (function(){
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.getElementById('primary-nav');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function(){
+        const isOpen = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    })();
+  </script>
 
 </body>
 </html>

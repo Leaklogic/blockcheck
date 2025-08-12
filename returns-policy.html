@@ -13,12 +13,14 @@
   <nav class="main-nav">
     <div class="nav-container">
       <a href="/" class="nav-logo" aria-label="LeakLogic UK Homepage">
-        <img src="/assets/logic-leak-logo.png" alt="LeakLogic UK Logo">
+        <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo">
       </a>
-      <div class="nav-links">
-        <a href="/product.html">Buy Now</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <div id="primary-nav" class="nav-links">
         <a href="/blog/">Blog & Guides</a>
         <a href="/symptom-checker.html">Symptom Checker</a>
+        <a href="/product.html" class="nav-button">Buy Now</a>
+        <a href="/#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -52,6 +54,19 @@
   </main>
   
   <!-- Paste your standard footer HTML here -->
+
+  <script>
+    // Mobile hamburger toggle
+    (function(){
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.getElementById('primary-nav');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function(){
+        const isOpen = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    })();
+  </script>
 
 </body>
 </html>
