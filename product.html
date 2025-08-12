@@ -295,7 +295,8 @@
 
       addBtn.addEventListener('click', () => {
         const q = Math.max(1, Math.min(10, parseInt(qtyEl.value || '1', 10)));
-        cartQty = Math.max(0, Math.min(10, cartQty + q));
+        // Do not add twice; set cart quantity to selected qty
+        cartQty = q;
         updateBadge();
         addBtn.textContent = `Added (${cartQty})`;
         setTimeout(() => { addBtn.textContent = 'Add to basket'; }, 1200);
