@@ -177,7 +177,26 @@
               <li>✅ Includes everything needed for ≈ 15 tests</li>
               <li>✅ Fast UK Shipping Options Available</li>
           </ul>
-          <button id="checkout-button" class="buy-button">Buy Now with Secure Checkout</button>
+          <div class="product-actions">
+            <div class="cart-mini" style="display:flex;align-items:center;gap:8px;">
+              <button type="button" id="dec2" class="mini-btn" aria-label="Decrease quantity">−</button>
+              <button id="cart-button" class="cart-button" title="Checkout">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="20" r="0"></circle><path d="M6 6h14l-1.5 8h-11z"/><path d="M6 6l-1-3H3"/></svg>
+                <span id="cart-count" class="cart-count" style="display:none">0</span>
+              </button>
+              <button type="button" id="inc2" class="mini-btn" aria-label="Increase quantity">+</button>
+            </div>
+            <label for="qty">Qty</label>
+            <input id="qty" class="qty-input" type="number" min="1" max="10" value="1">
+            <button id="add-to-cart" class="button button-cart">Add to basket</button>
+            <span class="product-actions-break"></span>
+            <button id="checkout-button" class="button button-checkout">Checkout</button>
+            <div class="pay-logos" aria-label="Accepted payment methods">
+              <span class="badge badge-stripe">Stripe</span>
+              <span class="badge badge-paypal">PayPal</span>
+              <span class="badge badge-gpay">Google&nbsp;Pay</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -241,7 +260,13 @@
 
     document.getElementById("checkout-button").addEventListener("click", async function () {
       try {
-        const response = await fetch('/.netlify/functions/create-checkout-session', { method: 'POST' });
+        const qtyEl = document.getElementById('qty');
+        const quantity = Math.max(1, Math.min(10, parseInt(qtyEl.value || '1', 10)));
+        const response = await fetch('/.netlify/functions/create-checkout-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ quantity })
+        });
         if (!response.ok) { throw new Error(`Server error: ${response.statusText}`); }
         const session = await response.json();
         const result = await stripe.redirectToCheckout({ sessionId: session.id });
@@ -251,6 +276,48 @@
         alert("An error occurred. Please try again.");
       }
     });
+
+    // Lightweight client-side basket feel (visual only)
+    (function(){
+      const addBtn = document.getElementById('add-to-cart');
+      const qtyEl = document.getElementById('qty');
+      const cartBtn = document.getElementById('cart-button');
+      const cartCount = document.getElementById('cart-count');
+      const inc = document.getElementById('inc2');
+      const dec = document.getElementById('dec2');
+
+      let cartQty = 0;
+
+      function updateBadge() {
+        if (cartQty > 0) { cartCount.style.display = 'flex'; cartCount.textContent = String(cartQty); }
+        else { cartCount.style.display = 'none'; }
+      }
+
+      addBtn.addEventListener('click', () => {
+        const q = Math.max(1, Math.min(10, parseInt(qtyEl.value || '1', 10)));
+        cartQty = Math.max(0, Math.min(10, cartQty + q));
+        updateBadge();
+        addBtn.textContent = `Added (${cartQty})`;
+        setTimeout(() => { addBtn.textContent = 'Add to basket'; }, 1200);
+      });
+
+      // Cart icon goes straight to checkout using current qty
+      cartBtn.addEventListener('click', async () => {
+        const quantity = Math.max(1, cartQty || parseInt(qtyEl.value || '1', 10));
+        try {
+          const response = await fetch('/.netlify/functions/create-checkout-session', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ quantity })
+          });
+          if (!response.ok) throw new Error('Server error');
+          const session = await response.json();
+          const result = await stripe.redirectToCheckout({ sessionId: session.id });
+          if (result.error) alert(result.error.message);
+        } catch (e) { alert('Checkout failed. Please try again.'); }
+      });
+
+      inc.addEventListener('click', () => { cartQty = Math.min(10, cartQty + 1); qtyEl.value = cartQty; updateBadge(); });
+      dec.addEventListener('click', () => { cartQty = Math.max(0, cartQty - 1); qtyEl.value = Math.max(1, cartQty); updateBadge(); });
+    })();
   </script>
 
   <script>

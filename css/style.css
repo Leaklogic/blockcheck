@@ -395,6 +395,94 @@ body.blog-article {
     transform: translateY(-2px);
 }
 
+/* === PRODUCT ACTIONS (Add to basket / Checkout) === */
+.product-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+.product-actions-break { flex-basis: 100%; }
+.product-actions label { font-weight: 600; color: var(--dark-navy); }
+.qty-input {
+  width: 72px;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.06);
+}
+.product-actions .button { flex: 0 0 auto; }
+.product-actions .button-checkout { flex: 1 1 100%; }
+
+/* Payment logos/badges under actions */
+.pay-logos { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; flex-basis: 100%; }
+.badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 28px; padding: 0 10px; border-radius: 6px; font-weight: 700; font-size: 12px; color: #fff;
+}
+.badge-stripe { background: #635bff; }
+.badge-paypal { background: #003087; }
+.badge-gpay { background: #000000; }
+.button:hover { transform: translateY(-2px); }
+.button:focus { outline: 2px solid rgba(0,0,0,0.15); outline-offset: 2px; }
+.button-cart { background: var(--yellow); color: #00233f; padding: 0 10px; font-size: 1rem; white-space: nowrap; }
+.button-cart:hover { background: #ffde59; }
+.button-checkout { background: #00b894; color: #003b35; }
+.button-checkout:hover { background: #02c09f; }
+
+/* === CART ICON / POPOVER (product page) === */
+.cart-button {
+  background: transparent;
+  border: 2px solid #8aa0b5;
+  width: 36px; height: 36px; padding: 0;
+  border-radius: 6px; box-sizing: border-box;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; position: relative;
+}
+.cart-button svg { width: 20px; height: 20px; stroke: #b7c3cf; fill: none; stroke-width: 2; }
+.cart-count {
+  position: absolute; top: -6px; right: -6px;
+  background: var(--yellow); color: #00233f; border-radius: 12px;
+  min-width: 18px; height: 18px; padding: 0 4px;
+  font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.mini-btn { width: 36px; height: 36px; border-radius: 6px; border: 2px solid #8aa0b5; background: transparent; color: #b7c3cf; font-weight: 800; }
+.cart-popover {
+  display: none; position: absolute; top: calc(100% + 8px); left: 0;
+  width: min(260px, 85vw); background: var(--dark-navy);
+  border: 1px solid var(--navy); border-radius: 8px; padding: 12px; color: var(--white); z-index: 200;
+}
+.cart-popover.open { display: block; }
+.cart-popover .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.cart-popover .qty-controls { display: flex; align-items: center; gap: 8px; }
+.cart-popover .qty-controls button { width: 32px; height: 32px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.35); background: transparent; color: #fff; font-weight: 700; }
+.cart-popover .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.cart-popover .actions .button { flex: 1; height: 38px; }
+
+@media (max-width: 640px) {
+  .product-actions { gap: 8px; }
+  .cart-button { width: 40px; height: 40px; }
+  .qty-input { width: 68px; height: 40px; }
+  .button { height: 42px; }
+  .button-cart { padding: 0 10px; font-size: 0.95rem; }
+}
+
 /* === NEW, REFINED REVIEWS SECTION STYLES === */
 .reviews-section {
     padding: 80px 20px;

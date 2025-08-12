@@ -4,6 +4,15 @@ exports.handler = async (event) => {
   const YOUR_DOMAIN = 'https://leaklogicuk.co.uk';
 
   try {
+    // Read quantity from POST body if provided (fallback to 1)
+    let qty = 1;
+    if (event && event.body) {
+      try {
+        const payload = JSON.parse(event.body);
+        const q = parseInt(payload.quantity, 10);
+        if (!Number.isNaN(q)) qty = Math.max(1, Math.min(10, q));
+      } catch (_) {}
+    }
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card', 'paypal'],
       
@@ -67,7 +76,7 @@ exports.handler = async (event) => {
             // === UPDATED PRODUCT PRICE ===
             unit_amount: 999, // Price in pence (999p = £9.99)
           },
-          quantity: 1,
+          quantity: qty,
         },
       ],
       mode: 'payment',
