@@ -3,82 +3,70 @@
   
   <!-- Core Pages -->
   <url>
-    <loc>https://leaklogicuk.co.uk/</loc>
+    <loc>https://www.leaklogicuk.co.uk/</loc>
     <lastmod>2023-10-27</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://leaklogicuk.co.uk/product.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/product.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://leaklogicuk.co.uk/symptom-checker.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/symptom-checker.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.90</priority>
   </url>
   
   <!-- Blog Index -->
   <url>
-    <loc>https://leaklogicuk.co.uk/blog/</loc>
+    <loc>https://www.leaklogicuk.co.uk/blog/</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.80</priority>
   </url>
   
   <!-- Blog Posts -->
   <url>
-    <loc>https://leaklogicuk.co.uk/blog/head-gasket-sealant-vs-tester.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/blog/head-gasket-sealant-vs-tester.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://leaklogicuk.co.uk/blog/how-to-test-a-head-gasket-at-home.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/blog/how-to-test-a-head-gasket-at-home.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://leaklogicuk.co.uk/blog/pre-purchase-car-inspection-checklist.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/blog/pre-purchase-car-inspection-checklist.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://leaklogicuk.co.uk/blog/7-signs-of-blown-head-gasket.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/blog/7-signs-of-blown-head-gasket.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.70</priority>
   </url>
   
   <!-- Legal & Policy Pages (NEWLY ADDED) -->
   <url>
-    <loc>https://leaklogicuk.co.uk/shipping-policy.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/shipping-policy.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.10</priority>
   </url>
   <url>
-    <loc>https://leaklogicuk.co.uk/returns-policy.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/returns-policy.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.10</priority>
   </url>
   <url>
-    <loc>https://leaklogicuk.co.uk/privacy.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/privacy.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.10</priority>
   </url>
   <url>
-    <loc>https://leaklogicuk.co.uk/terms.html</loc>
+    <loc>https://www.leaklogicuk.co.uk/terms.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.10</priority>
-  </url>
-
-  <!-- Transactional Pages (No index but good to have in sitemap) -->
-  <url>
-    <loc>https://leaklogicuk.co.uk/success.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <priority>0.0</priority>
-  </url>
-  <url>
-    <loc>https://leaklogicuk.co.uk/cancel.html</loc>
-    <lastmod>2023-10-27</lastmod>
-    <priority>0.0</priority>
   </url>
 
 </urlset>

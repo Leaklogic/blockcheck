@@ -15,6 +15,12 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- GA4 base tag (replace G-XXXXXXX with your ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
+  </script>
   <style>
     /* Uses global styles in /css/style.css */
   </style>
@@ -65,6 +71,15 @@
       <p style="margin-top: 20px;">© 2025 LeakLogic Ltd. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    // Fire purchase event (approximate; Stripe webhooks recommended for server-auth purchases)
+    if (window.gtag) {
+      gtag('event', 'purchase', {
+        currency: 'GBP'
+        // Optionally include value and items if passed via query params/sessionStorage
+      });
+    }
+  </script>
 
   <script>
     // Mobile hamburger toggle

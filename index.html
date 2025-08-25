@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- SEO: Canonical tag tells Google this is the one true version of the page. -->
-  <link rel="canonical" href="https://leaklogicuk.co.uk/" />
+  <link rel="canonical" href="https://www.leaklogicuk.co.uk/" />
   
 <!-- === FAVICON CODE (UPDATED) === -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -27,6 +27,24 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- GA4 base tag (replace G-XXXXXXX with your ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
+  </script>
+  
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Head Gasket Tester Kit UK - LeakLogic Combustion Leak Detector">
+  <meta property="og:description" content="Suspect a blown head gasket? LeakLogic's UK-made head gasket tester kit gives a clear yes/no result in 2 mins. For DIY car owners & garages.">
+  <meta property="og:url" content="https://www.leaklogicuk.co.uk/">
+  <meta property="og:image" content="https://www.leaklogicuk.co.uk/assets/hero-kit.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Head Gasket Tester Kit UK - LeakLogic Combustion Leak Detector">
+  <meta name="twitter:description" content="Suspect a blown head gasket? LeakLogic's UK-made head gasket tester kit gives a clear yes/no result in 2 mins. For DIY car owners & garages.">
+  <meta name="twitter:image" content="https://www.leaklogicuk.co.uk/assets/hero-kit.png">
   <style>
     :root {
       --navy:#00315c;
@@ -95,6 +113,27 @@
     }]
   }
   </script>
+  <!-- Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.leaklogicuk.co.uk/"}
+    ]
+  }
+  </script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LeakLogic",
+    "url": "https://www.leaklogicuk.co.uk/",
+    "logo": "https://www.leaklogicuk.co.uk/assets/hex_logo_no_copy.png"
+  }
+  </script>
 
 
 
@@ -108,7 +147,7 @@
       <img src="/assets/hex_logo_no_copy.png" alt="LeakLogic UK Logo" class="logo-desktop">
       <img src="/assets/leaklogic-logo.png" alt="LeakLogic UK Logo" class="logo-mobile">
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
     <div id="primary-nav" class="nav-links">
       <a href="/blog/">Blog & Guides</a>
       <a href="/symptom-checker.html">Symptom Checker</a>
@@ -117,6 +156,28 @@
     </div>
   </div>
 </nav>
+
+<!-- Full-width trust band under header -->
+<div class="trust-band" role="region" aria-label="Key benefits">
+  <div class="container">
+    <div class="trust-track" aria-live="off">
+      <div class="trust-row">
+        <span>UK‑made</span>
+        <span>Non‑toxic</span>
+        <span>2‑minute result</span>
+        <span>14‑day returns</span>
+        <span>Secure checkout</span>
+      </div>
+      <div class="trust-row" aria-hidden="true">
+        <span>UK‑made</span>
+        <span>Non‑toxic</span>
+        <span>2‑minute result</span>
+        <span>14‑day returns</span>
+        <span>Secure checkout</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <header class="hero">
   <div class="container">
@@ -143,7 +204,28 @@
         <div class="feature-card"><h3>Universal fit</h3><p>Works with petrol, diesel and LPG engines. Tapered silicone bung seals most filler necks.</p></div>
       </div>
       <!-- SEO: Improved alt text for better image context. -->
-      <img src="assets/color-change.png" alt="Head gasket tester fluid changes from blue to yellow, indicating a positive test for a blown head gasket." class="color-change-image">
+      <img src="assets/color-change.png" alt="Head gasket tester fluid changes from blue to yellow, indicating a positive test for a blown head gasket." class="color-change-image" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <!-- How it works strip -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 style="text-align:center; margin:0 0 16px 0;">How it works</h2>
+      <div class="how-grid">
+        <div class="how-step">
+          <h3>1) Draw <span class="highlight">gases</span> through <span class="highlight">fluid</span></h3>
+          <p>Insert the tester into the expansion tank and let the engine idle. Exhaust gases (if present) bubble through the blue fluid.</p>
+        </div>
+        <div class="how-step">
+          <h3>2) Watch the <span class="highlight">colour</span></h3>
+          <p><strong>Blue</strong> stays blue = <strong>no leak</strong>. Blue turning <strong class="highlight">green/yellow</strong> = combustion gases detected.</p>
+        </div>
+        <div class="how-step">
+          <h3>3) Decide with <span class="highlight">confidence</span></h3>
+          <p>Get a <strong>definitive yes/no</strong> in under <strong>2 minutes</strong> so you can repair, negotiate, or rule out a head gasket issue.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -163,6 +245,18 @@
         <li>Twin‑chamber clear air‑lock with red cap</li>
         <li>Tapered black silicone bung Ø 11 mm → 24 mm</li>
         <li>Quick‑start instruction card</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="popular-guides">
+    <div class="container">
+      <h2>Popular Guides</h2>
+      <ul class="popular-guides-list" style="list-style: disc; padding-left: 20px; margin-top: 12px;">
+        <li><a href="/blog/how-to-test-a-head-gasket-at-home.html">How to Test a Head Gasket at Home – DIY Guide</a></li>
+        <li><a href="/blog/7-signs-of-blown-head-gasket.html">Blown Head Gasket Symptoms: 7 Warning Signs</a></li>
+        <li><a href="/blog/head-gasket-sealant-vs-tester.html">Head Gasket Sealant vs. Tester: What to Use First</a></li>
+        <li><a href="/blog/pre-purchase-car-inspection-checklist.html">DIY Pre‑Purchase Car Inspection Checklist (UK)</a></li>
       </ul>
     </div>
   </section>

@@ -321,7 +321,7 @@ body.blog-article {
   border-radius: 0 8px 8px 0;
 }
 .cta-box h3 { margin: 0 0 10px; font-size: 1.5rem; }
-.article-image { display: block; width: 100%; margin: 20px 0 30px 0; border-radius: 8px; }
+.article-image { display: block; width: 100%; height: auto; margin: 20px 0 30px 0; border-radius: 8px; }
 
 /* Blog article top nav */
 .blog-nav { background: var(--navy); padding: 16px 20px; border-bottom: 1px solid var(--cyan); }
@@ -361,6 +361,9 @@ body.blog-article {
     font-size: 2.25rem; 
     margin-bottom: 15px; 
 }
+.rating-summary { display: flex; align-items: center; gap: 8px; margin: 4px 0 10px; color: var(--dark-navy); }
+.rating-stars { color: var(--yellow); font-size: 1.1rem; letter-spacing: 2px; }
+.rating-text { font-weight: 600; font-size: 0.95rem; }
 .product-price { 
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem; 
@@ -376,6 +379,11 @@ body.blog-article {
     list-style-type: none; 
     padding-left: 0;
 }
+/* What's in the box inline icons */
+.inbox-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; margin: 10px 0 6px; }
+.inbox-item { display: flex; align-items: center; gap: 8px; color: var(--dark-navy); font-weight: 600; }
+.inbox-item .icon { width: 20px; text-align: center; }
+@media (max-width: 640px) { .inbox-list { grid-template-columns: 1fr; } }
 .buy-button { 
     display: inline-block; 
     width: 100%; 
@@ -440,12 +448,51 @@ body.blog-article {
 .pay-logos {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   margin-top: 8px;
   flex-wrap: nowrap; /* keep on one line */
   flex-basis: 100%;
-  justify-content: space-between; /* align left and right edges */
+  justify-content: flex-end; /* right-align the group */
   width: 100%;
+}
+.pay-logos .pay-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  height: 32px;
+}
+.pay-logos .pay-logo img {
+  display: block;
+  height: 22px;
+  width: auto;
+  max-width: 100%;
+}
+/* Make GPay and Apple Pay 50% larger while keeping alignment */
+.pay-logos .pay-logo.gpay img,
+.pay-logos .pay-logo.applepay img {
+  height: 33px; /* 22px * 1.5 */
+}
+
+/* Trust line near CTAs (removed) */
+.cta-trust { display: none; }
+
+/* Urgency / assurance copy near CTAs */
+.cta-assurance {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+  color: var(--dark-navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-basis: 100%;
+}
+.cta-assurance .dim { opacity: 0.7; font-weight: 600; }
+
+@media (max-width: 640px) {
+  .cta-trust { gap: 20px; }
+  .cta-assurance { font-size: 0.9rem; gap: 10px; }
 }
 .badge {
   display: inline-flex; align-items: center; justify-content: center;
@@ -460,8 +507,11 @@ body.blog-article {
 .button:focus { outline: 2px solid rgba(0,0,0,0.15); outline-offset: 2px; }
 .button-cart { background: var(--yellow); color: #00233f; padding: 0 10px; font-size: 1rem; white-space: nowrap; }
 .button-cart:hover { background: #ffde59; }
-.button-checkout { background: #00b894; color: #003b35; }
-.button-checkout:hover { background: #02c09f; }
+.button-checkout { background: #e5534b; color: #ffffff; }
+.button-checkout:hover { background: #f0645b; }
+
+/* Proof next to CTA (removed) */
+.cta-proof { display: none; }
 
 /* === CART ICON / POPOVER (product page) === */
 .cart-button {
@@ -493,11 +543,12 @@ body.blog-article {
 .cart-popover .actions .button { flex: 1; height: 38px; }
 
 @media (max-width: 640px) {
-  .product-actions { gap: 8px; }
-  .cart-button { width: 40px; height: 40px; }
-  .qty-input { width: 68px; height: 40px; }
-  .button { height: 42px; }
-  .button-cart { padding: 0 10px; font-size: 0.95rem; }
+  .product-actions { gap: 6px; }
+  .cart-button { width: 36px; height: 36px; }
+  .mini-btn { width: 34px; height: 34px; }
+  .qty-input { width: 56px; height: 38px; }
+  .button { height: 38px; font-size: 0.95rem; }
+  .button-cart { padding: 0 8px; font-size: 0.9rem; margin-left: 0; flex: 0 1 auto; }
 }
 
 /* === NEW, REFINED REVIEWS SECTION STYLES === */
@@ -558,11 +609,44 @@ footer {
   font-weight: 600;
 }
 .trust-band .container {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px;
+  display: flex; align-items: center; justify-content: center; padding: 10px 20px;
 }
-.trust-band .container span { white-space: nowrap; }
+/* Marquee structure */
+.trust-band .trust-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  flex: 0 0 auto; /* prevent flexbox shrinking */
+  gap: 0;
+}
+.trust-band .trust-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.trust-band .trust-row span { white-space: nowrap; }
+
+/* Desktop: show single row, no animation */
+@media (min-width: 641px) {
+  .trust-band .trust-track { animation: none; }
+  .trust-band .trust-row[aria-hidden="true"] { display: none; }
+}
+
+/* Mobile: auto-scrolling marquee with red text */
 @media (max-width: 640px) {
-  .trust-band .container { flex-wrap: wrap; justify-content: center; row-gap: 8px; }
+  .trust-band { overflow: hidden; }
+  .trust-band .container { overflow: hidden; justify-content: flex-start; }
+  .trust-band .trust-track {
+    will-change: transform;
+    animation: trust-marquee 30s linear infinite;
+  }
+  .trust-band .trust-row { gap: 40px; padding-right: 40px; }
+  .trust-band .trust-row span { color: var(--cyan); }
+}
+
+@keyframes trust-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 .footer-container {
     max-width: var(--maxw);
@@ -580,6 +664,36 @@ footer {
     color: var(--yellow);
 }
 
+/* === STICKY MOBILE BUY BAR (product page) === */
+.sticky-buybar { display: none; }
+@media (max-width: 640px) {
+  .product-section { padding-bottom: 110px; }
+  .sticky-buybar {
+    display: flex;
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #00233f; color: #fff;
+    border-top: 1px solid #003b67;
+    padding: 10px 12px; gap: 10px; align-items: center; z-index: 250;
+  }
+  .sticky-buybar .price { font-weight: 800; font-size: 1.05rem; margin-right: auto; }
+  .sticky-buybar .qty-input { width: 64px; height: 40px; }
+  .sticky-buybar .button { height: 40px; white-space: nowrap; }
+}
+
+/* === HOW IT WORKS STRIP === */
+.how-it-works { background: #f5f9fd; border-top: 1px solid #e1eefb; border-bottom: 1px solid #e1eefb; color: #0f172a; }
+.how-it-works .container { padding: 30px 20px; }
+.how-it-works h2 { font-family: 'Montserrat', sans-serif; font-size: 2rem; color: var(--dark-navy); }
+.how-it-works h3 { color: var(--dark-navy); }
+.how-it-works p { color: #334155; }
+.how-grid { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: stretch; }
+.how-step { background: #ffffff; border: 1px solid #e6eef7; border-radius: 10px; padding: 16px; height: 100%; display: flex; flex-direction: column; }
+.how-step h3 { margin: 0 0 8px 0; font-family: 'Montserrat', sans-serif; color: var(--dark-navy); }
+.how-step p { margin: 0; color: #334155; }
+.highlight { color: var(--cyan); font-weight: 800; }
+@media (min-width: 768px) {
+  .how-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+}
 
 
 

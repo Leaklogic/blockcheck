@@ -1,7 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
-  const YOUR_DOMAIN = 'https://leaklogicuk.co.uk';
+  const YOUR_DOMAIN = 'https://www.leaklogicuk.co.uk';
 
   try {
     // Read quantity from POST body if provided (fallback to 1)
