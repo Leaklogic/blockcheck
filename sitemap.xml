@@ -13,16 +13,61 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://www.leaklogicuk.co.uk/combustion-leak-tester/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://www.leaklogicuk.co.uk/symptom-checker.html</loc>
     <lastmod>2025-08-12</lastmod>
     <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.leaklogicuk.co.uk/manuals/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.leaklogicuk.co.uk/about/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://www.leaklogicuk.co.uk/delivery-returns/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.50</priority>
   </url>
   
   <!-- Blog Index -->
   <url>
     <loc>https://www.leaklogicuk.co.uk/blog/</loc>
-    <lastmod>2025-08-12</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.leaklogicuk.co.uk/guides/how-to-test-for-a-blown-head-gasket/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.leaklogicuk.co.uk/guides/how-a-combustion-leak-tester-works/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.leaklogicuk.co.uk/guides/combustion-leak-test-results-explained/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.leaklogicuk.co.uk/guides/common-block-tester-mistakes/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.leaklogicuk.co.uk/guides/fitment-and-adapter-guide/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.70</priority>
   </url>
   
   <!-- Blog Posts -->

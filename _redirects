@@ -12,6 +12,12 @@ http://www.leaklogicuk.co.uk/* https://www.leaklogicuk.co.uk/:splat   301!
 /product     /product.html   301
 /symptom-checker   /symptom-checker.html   301
 
+# Keyword-rich commercial hub aliases: redirect to the canonical hub URL
+/combustion-leak-tester-head-gasket-tester-block-sniff-tester-combustion-leak-detector-uk   /combustion-leak-tester/   301
+/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk    /combustion-leak-tester/   301
+/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOCK-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK   /combustion-leak-tester/   301
+/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK    /combustion-leak-tester/   301
+
 # PDF: maintain stable link without spaces (canonical = quick-start)
 /docs/Leak%20Logic_Block%20Check%20Blue.pdf   /docs/block-check-blue-quick-start.pdf   301!
 # If the physical file lives at the spaced filename, rewrite the canonical to it for serving:
