@@ -411,20 +411,55 @@ body.blog-article {
   gap: 10px;
   margin-top: 10px;
 }
-.added-toast {
-  position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%);
-  background: #00233f; color: #fff; padding: 10px 14px; border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25); font-weight: 600; display: none; z-index: 300;
+.marketplace-note {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--dark-navy);
+  font-weight: 700;
 }
-.product-actions-break { flex-basis: 100%; }
-.product-actions label { font-weight: 600; color: var(--dark-navy); }
-.qty-input {
-  width: 72px;
-  height: 44px;
-  padding: 0 12px;
+.marketplace-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+.marketplace-button {
+  flex: 1 1 220px;
+  min-width: 0;
+  text-decoration: none;
+}
+.marketplace-amazon {
+  background: #ff9900;
+  color: #111827;
+}
+.marketplace-amazon:hover {
+  background: #ffad33;
+}
+.marketplace-ebay {
+  background: #e53238;
+  color: #ffffff;
+}
+.marketplace-ebay:hover {
+  background: #f04b50;
+}
+.marketplace-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+.marketplace-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 6px 12px;
   border: 1px solid #d0d5dd;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--dark-navy);
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 .button {
   display: inline-flex;
@@ -441,38 +476,6 @@ body.blog-article {
   box-shadow: 0 1px 1px rgba(0,0,0,0.06);
 }
 .product-actions .button { flex: 0 0 auto; }
-.product-actions .button-checkout { flex: 1 1 100%; }
-.product-actions .button-cart { margin-left: auto; }
-
-/* Payment logos/badges under actions */
-.pay-logos {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 8px;
-  flex-wrap: nowrap; /* keep on one line */
-  flex-basis: 100%;
-  justify-content: flex-end; /* right-align the group */
-  width: 100%;
-}
-.pay-logos .pay-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  height: 32px;
-}
-.pay-logos .pay-logo img {
-  display: block;
-  height: 22px;
-  width: auto;
-  max-width: 100%;
-}
-/* Make GPay and Apple Pay 50% larger while keeping alignment */
-.pay-logos .pay-logo.gpay img,
-.pay-logos .pay-logo.applepay img {
-  height: 33px; /* 22px * 1.5 */
-}
 
 /* Trust line near CTAs (removed) */
 .cta-trust { display: none; }
@@ -489,66 +492,19 @@ body.blog-article {
   flex-basis: 100%;
 }
 .cta-assurance .dim { opacity: 0.7; font-weight: 600; }
-
-@media (max-width: 640px) {
-  .cta-trust { gap: 20px; }
-  .cta-assurance { font-size: 0.9rem; gap: 10px; }
-}
-.badge {
-  display: inline-flex; align-items: center; justify-content: center;
-  height: 28px; padding: 0 10px; border-radius: 6px; font-weight: 700; font-size: 12px; color: #fff; text-align: center;
-}
-.badge-stripe { background: #635bff; }
-.badge-paypal { background: #003087; }
-.badge-gpay { background: #000000; }
-.badge-apple { background: #000000; }
-.pay-logos .badge { flex: 1 1 0; min-width: 0; }
 .button:hover { transform: translateY(-2px); }
 .button:focus { outline: 2px solid rgba(0,0,0,0.15); outline-offset: 2px; }
-.button-cart { background: var(--yellow); color: #00233f; padding: 0 10px; font-size: 1rem; white-space: nowrap; }
-.button-cart:hover { background: #ffde59; }
-.button-checkout { background: #e5534b; color: #ffffff; }
-.button-checkout:hover { background: #f0645b; }
 
 /* Proof next to CTA (removed) */
 .cta-proof { display: none; }
 
-/* === CART ICON / POPOVER (product page) === */
-.cart-button {
-  background: transparent;
-  border: 2px solid #8aa0b5;
-  width: 36px; height: 36px; padding: 0;
-  border-radius: 6px; box-sizing: border-box;
-  display: inline-flex; align-items: center; justify-content: center;
-  cursor: pointer; position: relative;
-}
-.cart-button svg { width: 20px; height: 20px; stroke: #b7c3cf; fill: none; stroke-width: 2; }
-.cart-count {
-  position: absolute; top: -6px; right: -6px;
-  background: var(--yellow); color: #00233f; border-radius: 12px;
-  min-width: 18px; height: 18px; padding: 0 4px;
-  font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;
-}
-.mini-btn { width: 36px; height: 36px; border-radius: 6px; border: 2px solid #8aa0b5; background: transparent; color: #b7c3cf; font-weight: 800; }
-.cart-popover {
-  display: none; position: absolute; top: calc(100% + 8px); left: 0;
-  width: min(260px, 85vw); background: var(--dark-navy);
-  border: 1px solid var(--navy); border-radius: 8px; padding: 12px; color: var(--white); z-index: 200;
-}
-.cart-popover.open { display: block; }
-.cart-popover .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
-.cart-popover .qty-controls { display: flex; align-items: center; gap: 8px; }
-.cart-popover .qty-controls button { width: 32px; height: 32px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.35); background: transparent; color: #fff; font-weight: 700; }
-.cart-popover .actions { display: flex; gap: 8px; flex-wrap: wrap; }
-.cart-popover .actions .button { flex: 1; height: 38px; }
-
 @media (max-width: 640px) {
+  .cta-trust { gap: 20px; }
+  .cta-assurance { font-size: 0.9rem; gap: 10px; }
+  .marketplace-actions { flex-direction: column; }
+  .marketplace-button { flex-basis: auto; width: 100%; }
   .product-actions { gap: 6px; }
-  .cart-button { width: 36px; height: 36px; }
-  .mini-btn { width: 34px; height: 34px; }
-  .qty-input { width: 56px; height: 38px; }
   .button { height: 38px; font-size: 0.95rem; }
-  .button-cart { padding: 0 8px; font-size: 0.9rem; margin-left: 0; flex: 0 1 auto; }
 }
 
 /* === NEW, REFINED REVIEWS SECTION STYLES === */
@@ -676,8 +632,19 @@ footer {
     padding: 10px 12px; gap: 10px; align-items: center; z-index: 250;
   }
   .sticky-buybar .price { font-weight: 800; font-size: 1.05rem; margin-right: auto; }
-  .sticky-buybar .qty-input { width: 64px; height: 40px; }
-  .sticky-buybar .button { height: 40px; white-space: nowrap; }
+  .sticky-buybar .marketplace-actions {
+    flex: 1 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  .sticky-buybar .marketplace-button {
+    flex: 1 1 0;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
 }
 
 /* === HOW IT WORKS STRIP === */

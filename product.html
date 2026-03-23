@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Buy LeakLogic Block-Check Blue™ | Head Gasket Tester Kit UK</title>
-  <meta name="description" content="Purchase the LeakLogic Block-Check Blue™ head gasket test kit directly. Fast UK shipping options available. Get a definitive diagnosis in minutes for £9.99.">
+  <meta name="description" content="Buy the LeakLogic Block-Check Blue diagnostic test kit from our Amazon UK or eBay listings. Fast UK shipping options available. Get a definitive diagnosis in minutes for £9.99.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="https://www.leaklogicuk.co.uk/product.html" />
   
@@ -20,7 +20,6 @@
   <!-- Link to the new external stylesheet -->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://js.stripe.com" crossorigin>
   
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -165,8 +164,6 @@
   }
   </script>
 
-  <!-- Stripe.js -->
-  <script src="https://js.stripe.com/v3/"></script>
   <!-- GA4 base tag (replace G-XXXXXXX with your ID) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
   <script>
@@ -200,14 +197,14 @@
           <span>Non‑toxic</span>
           <span>2‑minute result</span>
           <span>14‑day returns</span>
-          <span>Secure checkout</span>
+          <span>Amazon &amp; eBay</span>
         </div>
         <div class="trust-row" aria-hidden="true">
           <span>UK‑made</span>
           <span>Non‑toxic</span>
           <span>2‑minute result</span>
           <span>14‑day returns</span>
-          <span>Secure checkout</span>
+          <span>Amazon &amp; eBay</span>
         </div>
       </div>
     </div>
@@ -243,28 +240,18 @@
             <div class="inbox-item"><span class="icon" aria-hidden="true">📘</span><span>Full instruction manual</span></div>
           </div>
           <div class="product-actions">
-            <div class="cart-mini" style="display:flex;align-items:center;gap:8px;">
-              <button type="button" id="dec2" class="mini-btn" aria-label="Decrease quantity">−</button>
-              <button id="cart-button" class="cart-button" title="Checkout">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="20" r="0"></circle><path d="M6 6h14l-1.5 8h-11z"/><path d="M6 6l-1-3H3"/></svg>
-                <span id="cart-count" class="cart-count" style="display:none">0</span>
-              </button>
-              <button type="button" id="inc2" class="mini-btn" aria-label="Increase quantity">+</button>
+            <p class="marketplace-note">Buy from your preferred marketplace:</p>
+            <div class="marketplace-actions" aria-label="Marketplace purchase options">
+              <a href="https://www.amazon.co.uk/dp/B0FK2P259J" class="button marketplace-button marketplace-amazon" target="_blank" rel="nofollow noopener noreferrer" data-marketplace="amazon">Buy on Amazon</a>
+              <a href="https://www.ebay.co.uk/itm/396859738655" class="button marketplace-button marketplace-ebay" target="_blank" rel="nofollow noopener noreferrer" data-marketplace="ebay">Buy on eBay</a>
             </div>
-            <label for="qty">Qty</label>
-            <input id="qty" class="qty-input" type="number" min="1" max="10" value="1">
-            <button id="add-to-cart" class="button button-cart">Add to basket</button>
-            <span class="product-actions-break"></span>
-            <button id="checkout-button" class="button button-checkout">Checkout</button>
             <div class="cta-assurance" aria-label="Order assurance and shipping timing">
-              <span>Orders before 1pm ship today (Mon–Fri)</span>
-              <span class="dim">14‑day money‑back guarantee</span>
+              <span>Choose Amazon or eBay checkout</span>
+              <span class="dim">14-day money-back guarantee</span>
             </div>
-            <div class="pay-logos" aria-label="Accepted payment methods">
-              <span class="pay-logo"><img src="https://cdn.simpleicons.org/stripe/635bff" alt="Stripe" loading="lazy" decoding="async"></span>
-              <span class="pay-logo"><img src="https://cdn.simpleicons.org/paypal/003087" alt="PayPal" loading="lazy" decoding="async"></span>
-              <span class="pay-logo gpay"><img src="https://cdn.simpleicons.org/googlepay/000000" alt="Google Pay" loading="lazy" decoding="async"></span>
-              <span class="pay-logo applepay"><img src="https://cdn.simpleicons.org/applepay/000000" alt="Apple Pay" loading="lazy" decoding="async"></span>
+            <div class="marketplace-badges" aria-label="Available marketplaces">
+              <span class="marketplace-badge">Amazon UK</span>
+              <span class="marketplace-badge">eBay UK</span>
             </div>
           </div>
         </div>
@@ -325,11 +312,12 @@
   
 
   <!-- Sticky mobile buy bar -->
-  <div class="sticky-buybar" aria-label="Quick checkout">
-    <div class="price">£9.99</div>
-    <label for="qty" style="margin-left:auto;">Qty</label>
-    <input id="qty" class="qty-input" type="number" min="1" max="10" value="1">
-    <button id="sticky-checkout" class="button button-checkout">Checkout</button>
+  <div class="sticky-buybar" aria-label="Quick buy links">
+    <div class="price">&pound;9.99</div>
+    <div class="marketplace-actions">
+      <a href="https://www.amazon.co.uk/dp/B0FK2P259J" class="button marketplace-button marketplace-amazon" target="_blank" rel="nofollow noopener noreferrer" data-marketplace="amazon">Amazon</a>
+      <a href="https://www.ebay.co.uk/itm/396859738655" class="button marketplace-button marketplace-ebay" target="_blank" rel="nofollow noopener noreferrer" data-marketplace="ebay">eBay</a>
+    </div>
   </div>
 
 <footer>
@@ -355,93 +343,17 @@
   </footer>
 
   <script>
-    const stripe = Stripe('pk_live_51RtEzvDTb8F5RSDHkYr3zwheLPs2se2foOhPjF3iYj8W79oJvP6G6WKYsqVIrBgM8XAgz1WJlkPSG5GxRNBQ9qud00i1QIeDAW'); 
-
-    document.getElementById("checkout-button").addEventListener("click", async function () {
-      if (window.gtag) { gtag('event', 'begin_checkout', { currency: 'GBP' }); }
-      try {
-        const qtyEl = document.getElementById('qty');
-        const quantity = Math.max(1, Math.min(10, parseInt(qtyEl.value || '1', 10)));
-        const response = await fetch('/.netlify/functions/create-checkout-session', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ quantity })
-        });
-        if (!response.ok) { throw new Error(`Server error: ${response.statusText}`); }
-        const session = await response.json();
-        const result = await stripe.redirectToCheckout({ sessionId: session.id });
-        if (result.error) { alert(result.error.message); }
-      } catch (error) {
-        console.error("Error:", error);
-        alert("An error occurred. Please try again.");
-      }
-    });
-
-    // Lightweight client-side basket feel (visual only)
     (function(){
-      const addBtn = document.getElementById('add-to-cart');
-      const qtyEl = document.getElementById('qty');
-      const cartBtn = document.getElementById('cart-button');
-      const cartCount = document.getElementById('cart-count');
-      const inc = document.getElementById('inc2');
-      const dec = document.getElementById('dec2');
-      const stickyCheckout = document.getElementById('sticky-checkout');
-
-      let cartQty = 0;
-
-      function updateBadge() {
-        if (cartQty > 0) { cartCount.style.display = 'flex'; cartCount.textContent = String(cartQty); }
-        else { cartCount.style.display = 'none'; }
-      }
-
-      const toast = document.createElement('div');
-      toast.className = 'added-toast';
-      toast.setAttribute('aria-live','polite');
-      toast.textContent = 'Added to basket';
-      document.body.appendChild(toast);
-
-      addBtn.addEventListener('click', () => {
-        const q = Math.max(1, Math.min(10, parseInt(qtyEl.value || '1', 10)));
-        // Do not add twice; set cart quantity to selected qty
-        cartQty = q;
-        if (window.gtag) { gtag('event', 'add_to_cart', { currency: 'GBP', value: (999 * cartQty) / 100, items: [{ item_name: 'Block-Check Blue™ Diagnostic Test Kit', quantity: cartQty }] }); }
-        updateBadge();
-        addBtn.textContent = `Added (${cartQty})`;
-        toast.style.display = 'block';
-        setTimeout(() => { addBtn.textContent = 'Add to basket'; toast.style.display = 'none'; }, 1200);
-      });
-
-      // Cart icon goes straight to checkout using current qty
-      cartBtn.addEventListener('click', async () => {
-        const quantity = Math.max(1, cartQty || parseInt(qtyEl.value || '1', 10));
-        if (window.gtag) { gtag('event', 'begin_checkout', { currency: 'GBP' }); }
-        try {
-          const response = await fetch('/.netlify/functions/create-checkout-session', {
-            method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ quantity })
-          });
-          if (!response.ok) throw new Error('Server error');
-          const session = await response.json();
-          const result = await stripe.redirectToCheckout({ sessionId: session.id });
-          if (result.error) alert(result.error.message);
-        } catch (e) { alert('Checkout failed. Please try again.'); }
-      });
-
-      inc.addEventListener('click', () => { cartQty = Math.min(10, cartQty + 1); qtyEl.value = cartQty; updateBadge(); });
-      dec.addEventListener('click', () => { cartQty = Math.max(0, cartQty - 1); qtyEl.value = Math.max(1, cartQty); updateBadge(); });
-
-      // Sticky checkout uses same quantity
-      stickyCheckout.addEventListener('click', async () => {
-        const quantity = Math.max(1, cartQty || parseInt(qtyEl.value || '1', 10));
-        if (window.gtag) { gtag('event', 'begin_checkout', { currency: 'GBP' }); }
-        try {
-          const response = await fetch('/.netlify/functions/create-checkout-session', {
-            method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ quantity })
-          });
-          if (!response.ok) throw new Error('Server error');
-          const session = await response.json();
-          const result = await stripe.redirectToCheckout({ sessionId: session.id });
-          if (result.error) alert(result.error.message);
-        } catch (e) { alert('Checkout failed. Please try again.'); }
+      const marketplaceLinks = document.querySelectorAll('[data-marketplace]');
+      marketplaceLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (window.gtag) {
+            gtag('event', 'select_content', {
+              content_type: 'marketplace_link',
+              item_id: link.getAttribute('data-marketplace')
+            });
+          }
+        });
       });
     })();
   </script>
