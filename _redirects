@@ -13,10 +13,23 @@ http://www.leaklogicuk.co.uk/* https://www.leaklogicuk.co.uk/:splat   301!
 /symptom-checker   /symptom-checker.html   301
 
 # Keyword-rich commercial hub aliases: redirect to the canonical hub URL
-/combustion-leak-tester-head-gasket-tester-block-sniff-tester-combustion-leak-detector-uk   /combustion-leak-tester/   301
-/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk    /combustion-leak-tester/   301
-/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOCK-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK   /combustion-leak-tester/   301
-/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK    /combustion-leak-tester/   301
+/combustion-leak-tester-head-gasket-tester-block-sniff-tester-combustion-leak-detector-uk   /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk    /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOCK-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK   /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK    /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+
+# Long-tail landing page test: clean slug + typo aliases
+/combustion-leak-tester-head-gaskit-tester-bloc-sniff-tester-combustion-leak-detector-uk    /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/combustion-leak-tester-head-gaskit-test-kit-bloc-sniff-tester-combustion-leak-detector-uk   /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/combustion-leak-tester-head-gasket-tester-bloc-snif-tester-combustion-leak-detector-uk      /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/combustion-leak-tester-head-gasket-tester-block-sniffer-tester-combustion-leak-detector-uk  /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/COMBUSTION-LEAK-TESTER-HEAD-GASKIT-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK    /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+
+# Legacy long-tail test slug
+/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-dr-headgasket-uk  /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-DR-HEADGASKET-UK   /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-head-gasket-test-kit-block-tester-uk   /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
+/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-HEAD-GASKET-TEST-KIT-BLOCK-TESTER-UK   /combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/   301
 
 # PDF: maintain stable link without spaces (canonical = quick-start)
 /docs/Leak%20Logic_Block%20Check%20Blue.pdf   /docs/block-check-blue-quick-start.pdf   301!

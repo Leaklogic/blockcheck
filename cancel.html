@@ -16,6 +16,12 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- GA4 base tag (replace G-XXXXXXX with your ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
+  </script>
   <style>
     /* Uses global styles in /css/style.css */
   </style>
@@ -43,8 +49,8 @@
       <p style="font-size: 1.2rem;">Direct checkout on this site has been replaced with marketplace links.</p>
       <p>Choose your preferred listing below to continue your order.</p>
       <div class="marketplace-actions" style="justify-content:center; margin-top: 24px;">
-        <a href="https://www.amazon.co.uk/dp/B0FK2P259J" class="button marketplace-button marketplace-amazon" target="_blank" rel="nofollow noopener noreferrer" data-marketplace="amazon">Buy on Amazon</a>
-        <a href="https://www.ebay.co.uk/itm/396859738655" class="button marketplace-button marketplace-ebay" target="_blank" rel="nofollow noopener noreferrer" data-marketplace="ebay">Buy on eBay</a>
+        <a href="https://www.amazon.co.uk/dp/B0FK2P259J" class="button marketplace-button marketplace-amazon" target="_blank" rel="nofollow noopener noreferrer" data-marketplace="amazon" data-marketplace-location="cancel_page">Buy on Amazon</a>
+        <a href="https://www.ebay.co.uk/itm/396859738655" class="button marketplace-button marketplace-ebay" target="_blank" rel="nofollow noopener noreferrer" data-marketplace="ebay" data-marketplace-location="cancel_page">Buy on eBay</a>
       </div>
       <a href="/product.html" style="text-decoration: underline; font-weight: 600; margin-top: 20px; display: inline-block;">Back to Product Page</a>
     </div>
@@ -71,21 +77,7 @@
     </div>
   </footer>
 
-  <script>
-    (function(){
-      const marketplaceLinks = document.querySelectorAll('[data-marketplace]');
-      marketplaceLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-          if (window.gtag) {
-            gtag('event', 'select_content', {
-              content_type: 'marketplace_link',
-              item_id: link.getAttribute('data-marketplace')
-            });
-          }
-        });
-      });
-    })();
-  </script>
+  <script src="/js/marketplace-tracking.js"></script>
 
   <script>
     // Mobile hamburger toggle
