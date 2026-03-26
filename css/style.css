@@ -673,6 +673,42 @@ body.page-shell {
   font-size: 2rem;
   margin-bottom: 24px;
 }
+.amazon-review-block {
+  margin-top: 32px;
+}
+.amazon-review-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.amazon-review-header h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark-navy);
+  margin: 0;
+}
+.amazon-review-header p {
+  margin: 0;
+}
+.review-card {
+  background: #f7fafc;
+  border: 1px solid #d9e6f2;
+  border-radius: 14px;
+  padding: 20px;
+}
+.review-card-text {
+  margin: 0 0 12px;
+  color: #243444;
+  font-size: 1.02rem;
+  font-style: italic;
+}
+.review-card-meta {
+  margin: 0;
+  color: #52606d;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
 
 /* Proof next to CTA (removed) */
 .cta-proof { display: none; }
@@ -687,6 +723,7 @@ body.page-shell {
   .video-embed-portrait,
   .video-caption { max-width: 100%; }
   .product-proof { padding: 40px 16px; }
+  .amazon-review-header { align-items: flex-start; flex-direction: column; }
 }
 
 /* === FOOTER STYLES === */
