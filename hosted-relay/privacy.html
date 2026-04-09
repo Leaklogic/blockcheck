@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mekworks eBay Connector Privacy Policy</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #13212c;
+        --muted: #5a6d78;
+        --paper: #f5f1e8;
+        --panel: #fffdf8;
+        --line: rgba(19, 33, 44, 0.12);
+        --accent: #0f7b74;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(15, 123, 116, 0.16), transparent 34%),
+          radial-gradient(circle at bottom right, rgba(224, 135, 40, 0.12), transparent 28%),
+          var(--paper);
+      }
+
+      main {
+        width: min(920px, calc(100% - 32px));
+        margin: 32px auto;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: var(--panel);
+        box-shadow: 0 20px 60px rgba(19, 33, 44, 0.08);
+      }
+
+      h1,
+      h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.05;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2.1rem, 5vw, 3.4rem);
+      }
+
+      h2 {
+        margin: 28px 0 10px;
+        font-size: 1.4rem;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+        font-size: 0.78rem;
+      }
+
+      .callout {
+        margin-top: 20px;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px dashed rgba(15, 123, 116, 0.28);
+        background: rgba(15, 123, 116, 0.05);
+      }
+
+      code {
+        font-family: Consolas, "Courier New", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>Mekworks eBay Connector</h1>
+      <p>
+        This page describes how the Mekworks eBay Connector handles information
+        when used to access eBay APIs.
+      </p>
+
+      <h2>What This Integration Does</h2>
+      <p>
+        The Mekworks eBay Connector is used to authenticate with eBay and send
+        API requests for browsing, account, inventory, and related eBay
+        developer workflows.
+      </p>
+
+      <h2>Information We Process</h2>
+      <ul>
+        <li>eBay OAuth tokens returned during sign-in.</li>
+        <li>API request and response data needed to complete user actions.</li>
+        <li>Basic operational data required to troubleshoot integration issues.</li>
+      </ul>
+
+      <h2>How Information Is Used</h2>
+      <ul>
+        <li>To authenticate a user with eBay.</li>
+        <li>To make API requests explicitly requested by the user.</li>
+        <li>To display results inside the local workbench application.</li>
+      </ul>
+
+      <h2>Storage</h2>
+      <p>
+        In the current test setup, tokens are primarily held for active session
+        use. Long-term storage of user data is not part of this relay site.
+      </p>
+
+      <h2>Third Parties</h2>
+      <p>
+        This integration communicates with eBay services as part of the normal
+        OAuth and API request flow.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For questions about this integration, contact Mekworks using the contact
+        details published on the site hosting this page.
+      </p>
+
+      <div class="callout">
+        Replace the contact section above with your real business contact details
+        before using this page in Production.
+      </div>
+    </main>
+  </body>
+</html>
