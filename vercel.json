@@ -4,6 +4,17 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "cleanUrls": false,
+  "routes": [
+    {
+      "src": "^/qr/?$",
+      "status": 307,
+      "headers": {
+        "Location": "https://hedz-blockcheck.vercel.app/",
+        "Cache-Control": "no-store",
+        "X-Robots-Tag": "noindex"
+      }
+    }
+  ],
   "redirects": [
     { "source": "/blog.html", "destination": "/blog/", "statusCode": 301 },
     { "source": "/product", "destination": "/product.html", "statusCode": 301 },
