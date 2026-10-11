@@ -1,0 +1,44 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": false,
+  "redirects": [
+    { "source": "/blog.html", "destination": "/blog/", "statusCode": 301 },
+    { "source": "/product", "destination": "/product.html", "statusCode": 301 },
+    { "source": "/symptom-checker", "destination": "/symptom-checker.html", "statusCode": 301 },
+    { "source": "/combustion-leak-tester-head-gasket-tester-block-sniff-tester-combustion-leak-detector-uk", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOCK-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/combustion-leak-tester-head-gaskit-tester-bloc-sniff-tester-combustion-leak-detector-uk", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/combustion-leak-tester-head-gaskit-test-kit-bloc-sniff-tester-combustion-leak-detector-uk", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/combustion-leak-tester-head-gasket-tester-bloc-snif-tester-combustion-leak-detector-uk", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/combustion-leak-tester-head-gasket-tester-block-sniffer-tester-combustion-leak-detector-uk", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/COMBUSTION-LEAK-TESTER-HEAD-GASKIT-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-UK", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-dr-headgasket-uk", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-DR-HEADGASKET-UK", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-head-gasket-test-kit-block-tester-uk", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/COMBUSTION-LEAK-TESTER-HEAD-GASKET-TESTER-BLOC-SNIFF-TESTER-COMBUSTION-LEAK-DETECTOR-HEAD-GASKET-TEST-KIT-BLOCK-TESTER-UK", "destination": "/combustion-leak-tester-head-gasket-tester-bloc-sniff-tester-combustion-leak-detector-uk/", "statusCode": 301 },
+    { "source": "/docs/Leak%20Logic_Block%20Check%20Blue.pdf", "destination": "/docs/block-check-blue-quick-start.pdf", "statusCode": 301 },
+    { "source": "/shipping-policy", "destination": "/shipping-policy.html", "statusCode": 301 },
+    { "source": "/returns-policy", "destination": "/returns-policy.html", "statusCode": 301 },
+    { "source": "/privacy", "destination": "/privacy.html", "statusCode": 301 },
+    { "source": "/terms", "destination": "/terms.html", "statusCode": 301 },
+    { "source": "/blog/how-to-test-a-head-gasket-at-home", "destination": "/blog/how-to-test-a-head-gasket-at-home.html", "statusCode": 301 },
+    { "source": "/blog/pre-purchase-car-inspection-checklist", "destination": "/blog/pre-purchase-car-inspection-checklist.html", "statusCode": 301 },
+    { "source": "/blog/head-gasket-sealant-vs-tester", "destination": "/blog/head-gasket-sealant-vs-tester.html", "statusCode": 301 },
+    { "source": "/blog/7-signs-of-blown-head-gasket", "destination": "/blog/7-signs-of-blown-head-gasket.html", "statusCode": 301 },
+    { "source": "/blog/signs-of-blown-head-gasket", "destination": "/blog/7-signs-of-blown-head-gasket.html", "statusCode": 301 },
+    { "source": "/blog/signs-of-blown-head-gasket.html", "destination": "/blog/7-signs-of-blown-head-gasket.html", "statusCode": 301 }
+  ],
+  "headers": [
+    {
+      "source": "/docs/LeakLogic_Block_Check_Blue_SDS.pdf",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
+      ]
+    }
+  ]
+}
