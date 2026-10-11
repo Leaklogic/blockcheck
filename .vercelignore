@@ -1,0 +1,11 @@
+.git/
+.vercel/
+node_modules/
+dist/
+.env*.local
+hosted-relay/
+netlify/
+CNAME
+_redirects
+SEO-*.md
+README.md
